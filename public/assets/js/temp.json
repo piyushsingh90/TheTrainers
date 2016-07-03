@@ -1,0 +1,19 @@
+{
+  "records": [
+    {
+      "Name": "Alfreds Futterkiste",
+      "City": "Berlin",
+      "Country": "Germany"
+    },
+    {
+      "Name": "Chop-suey Chinese",
+      "City": "Bern",
+      "Country": "Switzerland"
+    },
+    {
+      "Name": "Comércio Mineiro",
+      "City": "São Paulo",
+      "Country": "Brazil"
+    }
+  ]
+}

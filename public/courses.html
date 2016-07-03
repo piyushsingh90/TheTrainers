@@ -1,0 +1,210 @@
+<!--
+Author: WebThemez
+Author URL: http://webthemez.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Trainers</title>
+	<link rel="favicon" href="assets/images/favicon.png">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/logo.jpg" alt="Logo"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="courses.html">Fitness</a></li>
+							<li><a href="">Cooking</a></li>
+							<li><a href="">Dancing</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary">
+            <div class="container">
+                    <h1>Fitness</h1>
+                    <p>You are about to witness some of the best Fitness experts in your city.</p>
+            </div>
+    </header>
+
+    
+    <div class="container" ng-app="myApp" ng-controller="courseController">
+    <ul>
+  <li ng-repeat="x in myData">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+    <br/>
+		 <div class="dropdown">
+			  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort
+			  <span class="caret"></span></button>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">By Price (Low to High)</a></li>
+			    <li><a href="#">By Price (High to Low)</a></li>
+			    <li><a href="#">By Area</a></li>
+			    <li><a href="#">By Ratings</a></li>
+			  </ul>
+		</div> 
+	<br/>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+									<article class="col-sm-4 isotopeItem webdesign">
+										<div class="portfolio-item">
+											<img src="assets/images/trainer1.jpg" alt="Trainer 1" />
+											<div class="portfolio-desc align-center">
+												<div class="folio-info">
+													<a href="videos.html" class="fancybox">
+														<h5>Details</h5>
+														<i class="fa fa-link fa-2x"></i></a>
+												</div>
+											</div>
+											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
+										</div>
+									</article>
+
+									<article class="col-sm-4 isotopeItem photography">
+										<div class="portfolio-item">
+											<img src="assets/images/trainer2.jpg" alt="" />
+											<div class="portfolio-desc align-center">
+												<div class="folio-info">
+													<a href="assets/images/trainer2.jpg" class="fancybox">
+														<h5>Details</h5>
+														<i class="fa fa-link fa-2x"></i></a>
+												</div>
+											</div>
+											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
+										</div>
+									</article>
+
+
+									<article class="col-sm-4 isotopeItem photography">
+										<div class="portfolio-item">
+											<img src="assets/images/trainer3.jpg" alt="" />
+											<div class="portfolio-desc align-center">
+												<div class="folio-info">
+													<a href="assets/images/trainer3.jpg" class="fancybox">
+														<h5>Details</h5>
+														<i class="fa fa-link fa-2x"></i></a>
+												</div>
+											</div>
+											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
+										</div>
+									</article>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+
+	<footer id="footer">
+ 
+		<div class="container">
+   <div class="row">
+  <div class="footerbottom">
+    <div class="col-md-3 col-sm-6">
+      
+    </div>
+    <div class="col-md-3 col-sm-6">
+      
+    </div>
+    <div class="col-md-3 col-sm-6">
+      
+    </div>
+    <div class="col-md-3 col-sm-6"> 
+            	<div class="footerwidget"> 
+                         <h4>Contact</h4> 
+            <div class="contact-info"> 
+            <i class="fa fa-map-marker"></i> 1, City of Joy, Fitness Centre, Kolkata<br>
+            <i class="fa fa-phone"></i>+91 123 456 789 <br>
+             <i class="fa fa-envelope-o"></i> youremail@email.com
+              </div> 
+                </div><!-- end widget --> 
+    </div>
+  </div>
+</div>
+			<div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+			</div>
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> | 
+								<a href="about.html">About</a> |
+								<a href="courses.html">Courses</a> |
+								<a href="contact.html">Contact</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								v1.0,  Copyright &copy; 2016.
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/courses.js"></script>
+</body>
+</html>
