@@ -1,4 +1,11 @@
+<div ng-controller="TrainerController">
 
+	<header id="head" class="secondary">
+            <div class="container">
+                    <h1>{{param}}</h1>
+                    <p>TBD</p>
+                </div>
+    </header>
     <br/>
 		 <div class="dropdown">
 			  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort
@@ -15,9 +22,9 @@
 			<div class="row">
 				<div class="portfolio-items isotopeWrapper clearfix" id="3">
 
-									<article class="col-sm-4 isotopeItem webdesign">
+									<article class="col-sm-4 isotopeItem webdesign" ng-repeat="trainer in trainerData">
 										<div class="portfolio-item">
-											<img src="assets/images/trainer1.jpg" alt="Trainer 1" />
+											<img src="assets/images/{{trainer.image}}" />
 											<div class="portfolio-desc align-center">
 												<div class="folio-info">
 													<a href="#/videos" class="fancybox">
@@ -25,38 +32,12 @@
 														<i class="fa fa-link fa-2x"></i></a>
 												</div>
 											</div>
-											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
+											{{trainer.Name}}, &nbsp;{{trainer.Fees}}, &nbsp; {{trainer.serviceType}}
 										</div>
 									</article>
 
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="assets/images/trainer2.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="assets/images/trainer2.jpg" class="fancybox">
-														<h5>Details</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
-										</div>
-									</article>
-
-
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="assets/images/trainer3.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="assets/images/trainer3.jpg" class="fancybox">
-														<h5>Details</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-											Miss XYZ, &nbsp;INR 5000, &nbsp; Burra Bazaar, Kolkata
-										</div>
-									</article>
+									
 				</div>
 			</div>
 		</div>
+</div>
