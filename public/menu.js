@@ -8,6 +8,10 @@
 			                    templateUrl: 'indexView.html',
 			                    controller: 'RouteController'
 			                }).
+			                when('/index', {
+			                    templateUrl: 'indexView.html',
+			                    controller: 'RouteController'
+			                }).
 			                when('/about', {
 			                    templateUrl: 'aboutView.html',
 			                    controller: 'RouteController'
