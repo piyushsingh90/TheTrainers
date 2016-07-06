@@ -1,5 +1,5 @@
 (function(){
-			var module = angular.module('myApp', ['bootstrapSubmenu','ngRoute']);
+			var module = angular.module('myApp', ['bootstrapSubmenu','ngRoute','ngSanitize']);
 
 			module.config(['$routeProvider',
 			        function($routeProvider) {
@@ -24,6 +24,10 @@
 			                    templateUrl: 'videosView.html',
 			                    controller: 'RouteController'
 			                }).
+			                when('/videos/:param', {
+			                    templateUrl: 'videosView.html',
+			                    controller: 'VideoController'
+			                }).
 			                when('/:param', {
 			                    templateUrl: 'coursesView.html',
 			                    controller: 'TrainerController'
@@ -33,8 +37,51 @@
 			                });
 			        }]);
 
+			module.config(function($sceProvider) {
+			  $sceProvider.enabled(false);
+			});
+
 			module.controller("RouteController", function($scope,$routeParams,$http) {
 					//nothing to do as of now
+			});
+
+			module.controller("VideoController", function($scope,$routeParams,$http) {
+					$scope.param = $routeParams.param;
+					var parameter = $scope.param;
+					console.log('Video param ' + parameter);
+
+					
+
+					$scope.url = "https://www.youtube.com/embed/oOZ5CYlK5yA";
+
+					//$scope.explicitlyTrustedUrl = $sce.trustAsUrl($scope.url);
+
+					$scope.trainerVideoData = [
+									    {
+											"_id": "577a9a8f6acad2113441cd90",
+											"Name": "First Name",
+											"videos": [{
+												"id": "https://www.youtube.com/embed/oOZ5CYlK5yA"
+											}, {
+												"id": "https://www.youtube.com/embed/ha1269QWpJM"
+											}, {
+												"id": "https://www.youtube.com/embed/oOZ5CYlK5yA"
+											}]
+										}
+									  ];
+
+
+					if(parameter !== undefined){
+						console.log(parameter);
+						$http.get("/trainer/"+ parameter)
+						    .then(function(response) {
+						        console.log('success '+ JSON.stringify(response));
+						        $scope.content = response.data;
+						    }, function(response) {
+						        console.log('error '+ response);
+						        $scope.content = "Something went wrong";
+						    });
+					}
 			});
 
 			module.controller("TrainerController", function($scope,$routeParams,$http) {
@@ -44,6 +91,7 @@
 
 					$scope.trainerData = [
 									    {
+									      "_id":"577a9a8f6acad2113441cd90",
 									      "Name": "First Name",
 									      "Fees": "Rs 4000",
 									      "serviceType": "music",
@@ -56,6 +104,7 @@
 									      "image":"trainer1.jpg"
 									    },
 									    {
+									    	"_id":"577a9a8f6acad2113441cd90",
 									      "Name": "Second Name",
 									      "Fees": "Rs 5000",
 									      "serviceType": "music",
@@ -68,6 +117,7 @@
 									      "image":"trainer2.jpg"
 									    },
 									    {
+									    	"_id":"577a9a8f6acad2113441cd90",
 									      "Name": "Third Name",
 									      "Fees": "Rs 6000",
 									      "serviceType": "dance",
@@ -80,6 +130,7 @@
 									      "image":"trainer3.jpg"
 									    },
 									    {
+									    	"_id":"577a9a8f6acad2113441cd90",
 									      "Name": "Fourth Name",
 									      "Fees": "Rs 0",
 									      "serviceType": "Pata Nhi",

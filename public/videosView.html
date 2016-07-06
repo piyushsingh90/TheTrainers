@@ -1,6 +1,8 @@
-<header id="head" class="secondary">
+<div ng-controller="VideoController">
+
+	<header id="head" class="secondary">
             <div class="container">
-                    <h1>Miss XYZ</h1>
+                    <h1>{{trainerVideoData[0].Name}}</h1>
                     <p>No Matter what, SWEAT EVERYDAY!</p>
                 </div>
     </header>
@@ -26,54 +28,14 @@
 
 
 					<div class="row">
-						<nav id="filter" class="col-md-12 text-center">
-							<ul>
-								<li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".webdesign">Zumba</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".photography">Yoga</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".print">Others</a></li>
-							</ul>
-						</nav>
 						<div class="col-md-12">
 							<div class="row">
 								<div class="portfolio-items isotopeWrapper clearfix" id="2">
 
-									<article class="col-sm-6 isotopeItem webdesign">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/bNSRQIStSQg" frameborder="0" allowfullscreen></iframe>
+									<article class="col-sm-6 isotopeItem photography" ng-repeat="video in trainerVideoData[0].videos">
+									<iframe width="500" height="315" src="{{video.id}}" frameborder="0" allowfullscreen></iframe>
 									</article>
-
-									<article class="col-sm-6 isotopeItem photography">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/oOZ5CYlK5yA" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-
-									<article class="col-sm-6 isotopeItem photography">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/oOZ5CYlK5yA" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem print">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/ha1269QWpJM" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem photography">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/oOZ5CYlK5yA" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem webdesign">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/bNSRQIStSQg" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem print">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/ha1269QWpJM" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem photography">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/oOZ5CYlK5yA" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-									<article class="col-sm-6 isotopeItem print">
-											<iframe width="500" height="315" src="https://www.youtube.com/embed/ha1269QWpJM" frameborder="0" allowfullscreen></iframe>
-									</article>
+									
 								</div>
 
 							</div>
@@ -87,3 +49,5 @@
 		</div>
 
 	</section>
+
+	</div>
