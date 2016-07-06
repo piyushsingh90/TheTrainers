@@ -1,5 +1,5 @@
 (function(){
-			var module = angular.module('myApp', ['bootstrapSubmenu','ngRoute','ngSanitize']);
+			var module = angular.module('myApp', ['bootstrapSubmenu','ngRoute','ngSanitize','ngAnimate','ui.bootstrap']);
 
 			module.config(['$routeProvider',
 			        function($routeProvider) {
@@ -41,20 +41,18 @@
 			  $sceProvider.enabled(false);
 			});
 
+			
+
+
 			module.controller("RouteController", function($scope,$routeParams,$http) {
 					//nothing to do as of now
 			});
 
-			module.controller("VideoController", function($scope,$routeParams,$http) {
+			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log) {
 					$scope.param = $routeParams.param;
 					var parameter = $scope.param;
 					console.log('Video param ' + parameter);
 
-					
-
-					$scope.url = "https://www.youtube.com/embed/oOZ5CYlK5yA";
-
-					//$scope.explicitlyTrustedUrl = $sce.trustAsUrl($scope.url);
 
 					$scope.trainerVideoData = [
 									    {
@@ -66,7 +64,8 @@
 												"id": "https://www.youtube.com/embed/ha1269QWpJM"
 											}, {
 												"id": "https://www.youtube.com/embed/oOZ5CYlK5yA"
-											}]
+											}],
+											"phone":"9876543210"
 										}
 									  ];
 
@@ -82,6 +81,59 @@
 						        $scope.content = "Something went wrong";
 						    });
 					}
+
+					$scope.isCollapsed = true;
+
+
+
+				  $scope.items = ['item1', 'item2', 'item3'];
+
+			  	  $scope.toMobile;
+
+				  $scope.animationsEnabled = true;
+
+				  $scope.open = function (size) {
+
+				    var modalInstance = $uibModal.open({
+				      animation: $scope.animationsEnabled,
+				      templateUrl: 'myModalContent.html',
+				      controller: 'ModalInstanceCtrl',
+				      size: size,
+				      resolve: {
+				        toMobile: function () {
+				          return $scope.toMobile;
+				        }
+				      }
+				    });
+
+				    modalInstance.result.then(function (toMobile) {
+				      $scope.toMobile = toMobile;
+				      $log.info('you entered: ' + toMobile);
+				      //send message here
+				      //data from $scope.trainerVideoData, $scope.selected
+				    }, function () {
+				      $log.info('Modal dismissed at: ' + new Date());
+				    });
+				  };
+
+				  $scope.toggleAnimation = function () {
+				    $scope.animationsEnabled = !$scope.animationsEnabled;
+				  };
+
+			});
+
+
+			module.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, toMobile) {
+
+			  console.log("toMobile "+$scope.toMobile);
+
+			  $scope.ok = function () {
+			    $uibModalInstance.close($scope.toMobile);
+			  };
+
+			  $scope.cancel = function () {
+			    $uibModalInstance.dismiss('cancel');
+			  };
 			});
 
 			module.controller("TrainerController", function($scope,$routeParams,$http) {
