@@ -24,13 +24,17 @@
 			                    templateUrl: 'videosView.html',
 			                    controller: 'RouteController'
 			                }).
-			                when('/videos/:param', {
+			                when('/videos/:param1/:param2', {
 			                    templateUrl: 'videosView.html',
 			                    controller: 'VideoController'
 			                }).
 			                when('/:param', {
 			                    templateUrl: 'coursesView.html',
 			                    controller: 'TrainerController'
+			                }).
+			                when('/filter/:param1/:param2', {
+			                    templateUrl: 'coursesView.html',
+			                    controller: 'FilterController'
 			                }).
 			                otherwise({
 			                    redirectTo: '/'
@@ -48,37 +52,32 @@
 					//nothing to do as of now
 			});
 
+			module.controller("FilterController", function($scope,$routeParams,$http) {
+					$scope.param1 = $routeParams.param1;
+					$scope.param2 = $routeParams.param2;
+					console.log('Filter '+ $scope.param2 +' by ' + $scope.param1);
+			});
+
 			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log) {
-					$scope.param = $routeParams.param;
-					var parameter = $scope.param;
-					console.log('Video param ' + parameter);
+					$scope.subCategory = $routeParams.param1;
+					$scope.id = $routeParams.param2;
+					console.log()
+					//var parameter = $scope.param;
+					//console.log('Video param ' + parameter);
 
 
-					$scope.trainerVideoData = [
-									    {
-											"_id": "577a9a8f6acad2113441cd90",
-											"Name": "First Name",
-											"videos": [{
-												"id": "https://www.youtube.com/embed/oOZ5CYlK5yA"
-											}, {
-												"id": "https://www.youtube.com/embed/ha1269QWpJM"
-											}, {
-												"id": "https://www.youtube.com/embed/oOZ5CYlK5yA"
-											}],
-											"phone":"9876543210"
-										}
-									  ];
+					$scope.trainerVideoData = [];
+									    					
 
-
-					if(parameter !== undefined){
-						console.log(parameter);
-						$http.get("/trainer/"+ parameter)
+					if($scope.subCategory != undefined && $scope.id != undefined){
+						
+						$http.get("/trainer/"+ $scope.subCategory+"/"+$scope.id)
 						    .then(function(response) {
-						        console.log('success '+ JSON.stringify(response));
-						        $scope.content = response.data;
+						        console.log(response.data[0]);
+						        $scope.trainerVideoData = response.data[0];
 						    }, function(response) {
 						        console.log('error '+ response);
-						        $scope.content = "Something went wrong";
+						        $scope.trainerVideoData = "Something went wrong";
 						    });
 					}
 
@@ -139,72 +138,15 @@
 			module.controller("TrainerController", function($scope,$routeParams,$http) {
 					$scope.param = $routeParams.param;
 					var parameter = $scope.param;
-					console.log('param ' + parameter);
-
-					$scope.trainerData = [
-									    {
-									      "_id":"577a9a8f6acad2113441cd90",
-									      "Name": "First Name",
-									      "Fees": "Rs 4000",
-									      "serviceType": "music",
-									      "openToWorkshops": "Yes",
-									      "area": "Madhapur",
-									      "privateOrGroup":"private",
-									      "languages":"hindi,english",
-									      "place":"Yours",
-									      "noOfClasses":"4",
-									      "image":"trainer1.jpg"
-									    },
-									    {
-									    	"_id":"577a9a8f6acad2113441cd90",
-									      "Name": "Second Name",
-									      "Fees": "Rs 5000",
-									      "serviceType": "music",
-									      "openToWorkshops": "No",
-									      "area": "hitech",
-									      "privateOrGroup":"group",
-									      "languages":"bengali,english",
-									      "place":"Mine",
-									      "noOfClasses":"7",
-									      "image":"trainer2.jpg"
-									    },
-									    {
-									    	"_id":"577a9a8f6acad2113441cd90",
-									      "Name": "Third Name",
-									      "Fees": "Rs 6000",
-									      "serviceType": "dance",
-									      "openToWorkshops": "Yes",
-									      "area": "Gachibowli",
-									      "privateOrGroup":"private",
-									      "languages":"telugu,english",
-									      "place":"Yours",
-									      "noOfClasses":"0",
-									      "image":"trainer3.jpg"
-									    },
-									    {
-									    	"_id":"577a9a8f6acad2113441cd90",
-									      "Name": "Fourth Name",
-									      "Fees": "Rs 0",
-									      "serviceType": "Pata Nhi",
-									      "openToWorkshops": "Yes",
-									      "area": "Begupet",
-									      "privateOrGroup":"private",
-									      "languages":"spanish,english",
-									      "place":"Yours",
-									      "noOfClasses":"4",
-									      "image":"trainer4.jpg"
-									    }
-									  ];
+					$scope.trainerData = [];
 
 					if(parameter !== undefined){
 						console.log(parameter);
 						$http.get("/trainer/"+ parameter)
 						    .then(function(response) {
-						        console.log('success '+ JSON.stringify(response));
-						        $scope.content = response.data;
+						    		$scope.trainerData = response.data;
 						    }, function(response) {
-						        console.log('error '+ response);
-						        $scope.content = "Something went wrong";
+						        $scope.trainerData = "Something went wrong";
 						    });
 					}
 			});
@@ -216,29 +158,31 @@
 					{ display: 'About Us', href: '#/about', children: []},
 					{ display: 'Courses', href: '#', children: [
 						{ display: 'Fitness', href: '#', children: [
-															{ display: 'Zumba', href: '#/zumba', children: []},
-															{ display: 'Exercise', href: '#/exercise', children: []},
-															{ display: 'Aerobics', href: '#/aerobics', children: []}
+															{ display: 'Yoga', href: '#/Yoga', children: []},
+															{ display: 'Exercise', href: '#/Exercise', children: []},
+															{ display: 'Aerobics', href: '#/Aerobics', children: []}
 						]},
-						{ display: 'Dance', href: '#/dance', children: []},
 
-						{ display: 'Music', href: '#/music', children: []},
+						{ display: 'Dance', href: '#', children: [
+															{ display: 'Dance', href: '#/Dance', children: []},
+															{ display: 'Zumba', href: '#/Zumba', children: []}
+						]},
+
+						{ display: 'Music', href: '#/Music', children: []},
 
 						{ display: 'Cooking', href: '#', children: [
-															{ display: 'Cooking', href: '#/cooking', children: []},
-															{ display: 'Baking', href: '#/baking', children: []},
+															{ display: 'Cooking', href: '#/Cooking', children: []},
+															{ display: 'Baking', href: '#/Baking', children: []},
 						]},
 
-						{ display: 'Painting', href: '#/painting', children: []},
+						{ display: 'Painting', href: '#/Painting', children: []},
 
-						{ display: 'Art & Craft', href: '#/artAndCraft', children: []},
+						{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
 
-						{ display: 'Yoga', href: '#/yoga', children: []},
-
-						{ display: 'Photography', href: '#/photography', children: []},
-
-						{ display: 'Foreign Language', href: '#/foreignLanguage', children: []}
-
+						{ display: 'Others', href: '#', children: [
+															{ display: 'Photography', href: '#/Photography', children: []},
+															{ display: 'Foreign Language', href: '#/ForeignLanguage', children: []},
+						]}
 
 						]},
 					{ display: 'Workshops', href: '#', children: []},

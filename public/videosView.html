@@ -2,7 +2,7 @@
 
 	<header id="head" class="secondary">
             <div class="container">
-                    <h1>{{trainerVideoData[0].Name}}</h1>
+                    <h1>{{trainerVideoData.Name}}</h1>
                     <p>No Matter what, SWEAT EVERYDAY!</p>
                 </div>
     </header>
@@ -67,8 +67,8 @@
 							<div class="row">
 								<div class="portfolio-items clearfix" id="2">
 
-									<article class="col-sm-6" ng-repeat="video in trainerVideoData[0].videos">
-									<iframe width="500" height="315" src="{{video.id}}" frameborder="0" allowfullscreen></iframe>
+									<article class="col-sm-6" ng-repeat="video in trainerVideoData.videos">
+									<iframe width="500" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>
 									</article>
 
 								</div>
