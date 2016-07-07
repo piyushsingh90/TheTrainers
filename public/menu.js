@@ -49,7 +49,23 @@
 
 
 			module.controller("RouteController", function($scope,$routeParams,$http) {
-					//nothing to do as of now
+					$scope.myInterval = 10000;
+					  $scope.noWrapSlides = false;
+					  $scope.active = 0;
+					  var slides = $scope.slides = [];
+					  var currIndex = 0;
+
+					  slides.push({
+					      image: 'assets/images/image-slider-1.jpg',
+					      text: 'Nice image',
+					      id: currIndex++
+					    });
+
+					  slides.push({
+					      image: 'assets/images/image-slider-2.jpg',
+					      text: 'Nice image',
+					      id: currIndex++
+					    });
 			});
 
 			module.controller("FilterController", function($scope,$routeParams,$http) {

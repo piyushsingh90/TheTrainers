@@ -3,20 +3,49 @@
 	<header id="head" class="secondary">
             <div class="container">
                     <h1>{{trainerVideoData.Name}}</h1>
-                    <p>No Matter what, SWEAT EVERYDAY!</p>
-                </div>
+            </div>
     </header>
 
-
-	<!-- container -->
-	<section class="container">
-	</br>
-	<div class="alert alert-info" role="alert">
-		  	Introducory Offer: Get upto 10% discount 
-    		<button type="button" class="btn btn-default" ng-click="open()">Get Discount Code</button>
+    <div class="row top-margin">
+		<div class="col-md-10">
+	    		<button type="button" class="btn btn-default" ng-click="open()">Get upto 10% discount</button>
+		</div>
 	</div>
 
-	<script type="text/ng-template" id="myModalContent.html">
+	<div class="row top-margin">
+		<div class="col-md-12">
+			<section id="portfolio" class="page-section section appear clearfix">
+					<p>
+						Welcome to my Fitness Channel ! My team and I have been working hard to create premium content just for you! We will be releasing weekly episodes ranging from show topics such as Yoga, Zumba so ... don't forget to check those!
+						</br></br>
+						I am so excited to take this next step with you guys and share my world with you.
+						I am here to shed some light on my personal journey and how I got into the fitness. Most importantly, let's remember to have fun and support each other along the way.
+						<br />
+					</p>
+			</section>
+		</div>
+	</div>
+
+
+	<div class="row top-margin">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="portfolio-items clearfix" id="2">
+					<article class="col-sm-6" ng-repeat="video in trainerVideoData.videos">
+						<iframe width="500" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
             <h3 class="modal-title">We will send the coupon code to your mobile</h3>
         </div>
@@ -46,43 +75,3 @@
             <button class="btn btn-warning" type="button" ng-click="cancel()">No, thanks</button>
         </div>
     </script>
-
-
-		 
-	<br/>
-		<div class="row">
-			<div class="col-md-12">
-				<section id="portfolio" class="page-section section appear clearfix">
-					<p>
-						Welcome to my Fitness Channel ! My team and I have been working hard to create premium content just for you! We will be releasing weekly episodes ranging from show topics such as Yoga, Zumba so ... don't forget to check those!
-						</br></br>
-						I am so excited to take this next step with you guys and share my world with you.
-						I am here to shed some light on my personal journey and how I got into the fitness. Most importantly, let's remember to have fun and support each other along the way.
-					<br />
-					</p>
-
-
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row">
-								<div class="portfolio-items clearfix" id="2">
-
-									<article class="col-sm-6" ng-repeat="video in trainerVideoData.videos">
-									<iframe width="500" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>
-									</article>
-
-								</div>
-
-							</div>
-
-
-						</div>
-					</div>
-
-				</section>
-			</div>
-		</div>
-
-	</section>
-
-	</div>

@@ -1,9 +1,3 @@
-/*
-Author: WebThemez.com
-Website: http://webthemez.com
-Note: Please do not remove the footer backlink (webthemez.com)--(if you want to remove contact: webthemez@gmail.com)
-Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
-*/
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 body {
@@ -23,10 +17,10 @@ h2 {
 	margin: 30px 0;
 }
 a{
-    color:#3d84e6;
+    color:#7A2E89;
 }
 a:hover, a:focus{
-    color:#3d84e6;
+    color:#7A2E89;
     text-decoration: underline;
 }
 .navbar-toggle {
@@ -75,7 +69,7 @@ label {
 #head {
 	/*background: #181015 url( ../images/bg_header.jpg) no-repeat;*/
 	background-size: cover;
-	height: 600px;
+	height: 400px;
 	text-align: center;
 	color: white;
 	font-weight: 300;
@@ -183,7 +177,7 @@ label {
 	background: #04a0b7;
 }
 .btn:hover, .btn:active {
-	color: #c0c0c0;
+	color: #633B94;
 }
 ul, .list.custom-list ul {
 	margin: 0 0 11px;
@@ -215,7 +209,7 @@ ul, .list.custom-list ul {
 	padding: 4px;
 }
 .thumbnail time {
-	background: #3d84e6;
+	background: #7A2E89;
 	padding: 5px 0;
 	display: block;
 	text-indent: 12px;
@@ -248,7 +242,7 @@ margin: 0 auto;
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, 
 .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus,
 .navbar-inverse .navbar-nav > .active > a{
-	background: #3d84e6;
+	background: #7A2E89;
 	color: #fff !important;
     border-radius: 0px;
 } 
@@ -258,7 +252,7 @@ margin: 0 auto;
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover{
 color: #fff !important;
     border-radius: 0px;
-    background: #3d84e6;
+    background: #7A2E89;
 }
 .heading-text{
     position: absolute;
@@ -285,7 +279,7 @@ font-size: 27px;
 .h-caption i {
 	display: block;
 	font-size: 54px;
-	color: #3d84e6;
+	color: #7A2E89;
 	margin-bottom: 36px;
 }
 .h-caption h4 {
@@ -332,6 +326,9 @@ ul.list-spaces li {
 }
 .top-margin {
 	margin-top: 20px;
+}
+.top-margin-big {
+	margin-top: 100px;
 }
 .circle {
 	background: rgb(214, 214, 214);
@@ -398,12 +395,7 @@ img.pull-left {
 	text-align: center;
 	line-height: 60px;
 }
-footer {
-	border-top: 1px solid #e5e5e5;
-	background:#D8D8D8;
-	margin-top: 40px;
-    padding-top: 20px;
-}
+
  ul.menu{
     padding: 0px;
 }
@@ -422,7 +414,7 @@ footer {
 	color: #8c8c8c;
 }
 .social a:hover {
-	color: #3d84e6;
+	color: #7A2E89;
 }
 /* Footer */
 .footer1 {
@@ -469,7 +461,7 @@ footer {
 .follow-me-icons i {
 	float: left;
 	margin: 0 10px 0 0;
-	color: #3d84e6;
+	color: #7A2E89;
 }
 .footer2 {
 	background: #000;
@@ -493,7 +485,7 @@ footer {
 	margin: 0 5px;
 }
 #services .fa {
-	color: #3d84e6;
+	color: #7A2E89;
 }
 /* carousel */
 #quote-carousel {
@@ -588,14 +580,14 @@ nav#filter li {
 nav#filter a {
 	padding: 4px 12px;
 	line-height: 20px;
-	border: 1px solid #3d84e6;
+	border: 1px solid #7A2E89;
 	text-decoration: none;
-	color: #3d84e6;
+	color: #7A2E89;
     border-left: 0px;
 border-right: 0px;
 }
 nav#filter a.current {
-	background: #3d84e6;
+	background: #7A2E89;
 	color: #fff;
 }
 .iconColor .fa {
@@ -703,7 +695,7 @@ nav#filter a.current {
 }
 .da-dots span.da-dots-current:after {
 	content: '';
-	background: #3d84e6;
+	background: #7A2E89;
 }
 .team-member {
 	padding-top: 5px;
@@ -734,7 +726,7 @@ nav#filter a.current {
 	color: #C7C7C7;
 }
 .team-socials i:hover {
-	color: #3d84e6;
+	color: #7A2E89;
 }
 .team-member h4 {
 	font-size: 19px;
@@ -750,8 +742,8 @@ nav#filter a.current {
 }
 #head.secondary { 
 	padding-top: 0px;
-	background:#3d84e6;
-	/*background: #3d84e6;*/
+	background:#7A2E89;
+	/*background: #7A2E89;*/
 	background-size: cover;
 	text-align: center; 
     padding:10px 0;
@@ -808,10 +800,10 @@ nav#filter a.current {
 	transform: scale(1.1);
 }
 .flat .plan.featured:hover li.plan-name, .flat .plan:hover li.plan-name, .flat .plan.featured.plan-name {
-	background: #3d84e6 !important;
+	background: #7A2E89 !important;
 }
 .btn {
-	background: #3d84e6;
+	background: #7A2E89;
 	color: #fff;
 }
 .footer2 a {
