@@ -56,16 +56,10 @@
 					  var currIndex = 0;
 
 					  slides.push({
-					      image: 'assets/images/image-slider-1.jpg',
-					      text: 'Nice image',
+					      image: 'assets/images/slides/banner.jpg',
 					      id: currIndex++
 					    });
 
-					  slides.push({
-					      image: 'assets/images/image-slider-2.jpg',
-					      text: 'Nice image',
-					      id: currIndex++
-					    });
 			});
 
 			module.controller("FilterController", function($scope,$routeParams,$http) {
