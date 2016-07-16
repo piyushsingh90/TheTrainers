@@ -1,0 +1,27 @@
+{ 
+    "_id" : ObjectId("576fa4206d9506801290c944"), 
+    "category" : "Fitness", 
+    "subCategory" : [
+        "Zumba", 
+        "Gym", 
+        "Cycling", 
+        "Swimming", 
+        "Jogging"
+    ]
+}
+{ 
+    "_id" : ObjectId("576fb7504213af83e4b6da78"), 
+    "category" : "Dance", 
+    "subCategory" : [
+        "Salsa", 
+        "Classical"
+    ]
+}
+{ 
+    "_id" : ObjectId("57712de558d7b1c40474d0be"), 
+    "category" : "Cooking", 
+    "subCategory" : [
+        "French", 
+        "Italian"
+    ]
+}

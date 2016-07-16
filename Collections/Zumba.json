@@ -1,0 +1,34 @@
+{ 
+    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
+    "Name" : "First Name", 
+    "Fees" : "Rs 4000", 
+    "serviceType" : "Zumba", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Madhapur", 
+    "privateOrGroup" : "private", 
+    "languages" : "hindi,english", 
+    "place" : "Yours", 
+    "noOfClasses" : "4", 
+    "image" : "trainer1.jpg", 
+    "videos" : [
+        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
+        "https://www.youtube.com/embed/ha1269QWpJM"
+    ]
+}
+{ 
+    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
+    "Name" : "Second Name", 
+    "Fees" : "Rs 5000", 
+    "serviceType" : "Zumba", 
+    "openToWorkshops" : "No", 
+    "area" : "hitech", 
+    "privateOrGroup" : "group", 
+    "languages" : "bengali,english", 
+    "place" : "Mine", 
+    "noOfClasses" : "7", 
+    "image" : "trainer2.jpg", 
+    "videos" : [
+        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
+        "https://www.youtube.com/embed/ha1269QWpJM"
+    ]
+}

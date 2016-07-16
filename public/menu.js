@@ -74,7 +74,7 @@
 					console.log('Filter '+ $scope.param2 +' by ' + $scope.param1);
 			});
 
-			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log) {
+			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
 					$scope.id = $routeParams.param2;
 					console.log()
@@ -90,6 +90,7 @@
 						$http.get("/trainer/"+ $scope.subCategory+"/"+$scope.id)
 						    .then(function(response) {
 						        console.log(response.data[0]);
+						        console.log(response.data[1]);
 						        $scope.trainerVideoData = response.data[0];
 						    }, function(response) {
 						        console.log('error '+ response);
@@ -122,10 +123,20 @@
 				    });
 
 				    modalInstance.result.then(function (toMobile) {
+				    	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 				      $scope.toMobile = toMobile;
 				      $log.info('you entered: ' + toMobile);
-				      //send message here
-				      //data from $scope.trainerVideoData, $scope.selected
+				      var msgBody = $scope.trainerVideoData;
+				      msgBody.mobile = toMobile;
+				      
+				      $http.post('/sms',$httpParamSerializerJQLike(msgBody))
+				      	.success(function(data){
+				      		console.log("message successfully sent to "+toMobile);
+				      		console.log(data);
+				      	})
+				      	.error(function(err){
+				      		console.log(err);
+				      	});
 				    }, function () {
 				      $log.info('Modal dismissed at: ' + new Date());
 				    });
@@ -135,15 +146,15 @@
 				    $scope.animationsEnabled = !$scope.animationsEnabled;
 				  };
 
-			});
+		});
 
 
 			module.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, toMobile) {
-
+				
 			  console.log("toMobile "+$scope.toMobile);
 
-			  $scope.ok = function () {
-			    $uibModalInstance.close($scope.toMobile);
+			  $scope.ok = function (trainerVideoData) {
+			  	$uibModalInstance.close($scope.toMobile);
 			  };
 
 			  $scope.cancel = function () {

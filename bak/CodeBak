@@ -1,0 +1,37 @@
+function getNextSequenceValue(sequenceName){
+
+   var sequenceDocument = db.collection('counter').findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+	
+   return sequenceDocument.sequence_value;
+}
+
+
+
+/*var keys = [];
+	var insertString = "{";
+  for(var k in reqBody){ 
+  	keys.push(k);
+  	insertString += k+":"+reqBody[k]+",";
+  }
+  insertString = insertString.substring(0,insertString.length-1);
+
+db.dbs.collectionNames(function(err,data){
+		if(err){
+			httpMsgs.show500(req,resp,err);
+		}						
+		else{
+			var a=[];
+			data.map(function(x) {
+				if(x.name!="system.indexes" && x.name!="system.js" )
+    		 a.push(x.name);    		
+      })
+      httpMsgs.sendJson(req,resp,a);
+		}
+	})	
+
+*/
+  	//subCategory:reqBody.subCategory

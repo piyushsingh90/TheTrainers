@@ -1,0 +1,129 @@
+db.courses.update({category:"Fitness"},{$pushAll:{subCategory:["Jogging"]}})
+
+https://docs.mongodb.com/v3.0/tutorial/store-javascript-function-on-server/ --stored javascript
+
+********* Mongo mport and Export ************
+
+http://www.thegeekstuff.com/2013/09/mongodump-mongorestore/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+TheGeekStuff+(The+Geek+Stuff)
+
+mongodump --db mongodevdb <dir name>
+mongorestore --db <db name> <dir name>
+
+***********
+
+
+db.counter.insertMany([{_id:"Chinese",sequence_value:0},
+{_id:"Classical",sequence_value:0},
+{_id:"Cycling",sequence_value:0},
+{_id:"French",sequence_value:0},
+{_id:"Gym",sequence_value:0},
+{_id:"Italian",sequence_value:0},
+{_id:"Jogging",sequence_value:0},
+{_id:"Salsa",sequence_value:0},
+{_id:"Swimming",sequence_value:0}])
+
+//stored Javascript
+db.system.js.save(
+   {
+     _id: "getNextSeque123nceValue",
+     value : function(x) { var sequenceDocument = db.counter.findAndModify({
+      						query:{_id: x },
+						      update: {$inc:{sequence_value:1}},
+						      new:true
+   						});	
+   return sequenceDocument.sequence_value; }
+   }
+)
+
+
+--Adding subcategory
+{
+    "category": "Cooking",
+    "subCategory":"Italian"
+}
+
+--Adding category
+{
+    "category": "Cooking",
+}
+--Adding Trainer
+{
+    "subCategory":"Italian",
+    "Name":"Sample",
+    "Rate":250,
+    "Pic":"fkjhsf",
+    "links":["www.google.com","Youtube.com","yahoo.com"]
+}
+
+
+
+
+__________________________________________
+
+Dumps
+
+  //db.dbs.listCollections().toArray(function(err, collections){
+    //collections = [{"name": "coll1"}, {"name": "coll2"}]
+      //resp.write(JSON.stringify(collections));  
+      //resp.end();
+    //});
+    //
+  
+
+
+
+  var ObjectId = require('mongodb').ObjectID;
+
+var get_by_id = function(id, callback) {
+  console.log("find by: "+ id);
+  get_collection(function(collection) {
+    collection.findOne({"_id": new ObjectId(id)}, function(err, doc) {
+       callback(doc);
+    });
+  });
+}
+
+
+Insert Into Music
+_______________________________
+db.createCollection('ForeignLanuage')
+db.Music.find().pretty()
+db.Music.insert([{
+                        "Name": "Second Name",
+                        "Fees": "Rs 5000",
+                        "serviceType": "music",
+                        "openToWorkshops": "No",
+                        "area": "hitech",
+                        "privateOrGroup":"group",
+                        "languages":"bengali,english",
+                        "place":"Mine",
+                        "noOfClasses":"7",
+                        "image":"trainer2.jpg",
+                        "videos":["www.google.com","Youtube.com","yahoo.com"]
+                      },
+                      {
+                        "Name": "Third Name",
+                        "Fees": "Rs 6000",
+                        "serviceType": "dance",
+                        "openToWorkshops": "Yes",
+                        "area": "Gachibowli",
+                        "privateOrGroup":"private",
+                        "languages":"telugu,english",
+                        "place":"Yours",
+                        "noOfClasses":"0",
+                        "image":"trainer3.jpg",
+                        "videos":["www.google.com","Youtube.com","yahoo.com"]
+                      },
+                      {
+                        "Name": "Fourth Name",
+                        "Fees": "Rs 0",
+                        "serviceType": "Pata Nhi",
+                        "openToWorkshops": "Yes",
+                        "area": "Begupet",
+                        "privateOrGroup":"private",
+                        "languages":"spanish,english",
+                        "place":"Yours",
+                        "noOfClasses":"4",
+                        "image":"trainer4.jpg",
+                        "videos":["www.google.com","Youtube.com","yahoo.com"]
+                      }])

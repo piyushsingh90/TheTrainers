@@ -1,0 +1,40 @@
+{ 
+    "_id" : "Zumba", 
+    "sequence_value" : 7.0
+}
+{ 
+    "_id" : "Chinese", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Classical", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Cycling", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "French", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Gym", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Italian", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Jogging", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Salsa", 
+    "sequence_value" : 0.0
+}
+{ 
+    "_id" : "Swimming", 
+    "sequence_value" : 0.0
+}
