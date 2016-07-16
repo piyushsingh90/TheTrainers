@@ -44,7 +44,7 @@ exports.getTrainer=function(req,resp,id,category){
 	})
 }
 
-
+//TODO: fix this. giving error in reAL time
 /*exports.updateTrainer=function(req,resp,id,category,updatedData){
 	db.dbs.collection(category).updateOne({"_id": new ObjectId(id)},{$set:{updatedData}}, function(err, data) {
 		if(!err){

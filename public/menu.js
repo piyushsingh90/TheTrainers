@@ -213,7 +213,6 @@
 
 						]},
 					{ display: 'Workshops', href: '#', children: []},
-					{ display: 'Gallery', href: '#', children: []},
 					{ display: 'Contact', href: '#/contact', children: []}
 					];
 				});

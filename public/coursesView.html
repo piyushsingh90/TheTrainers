@@ -4,20 +4,7 @@
             <div class="container">
                     <h1>{{param}}</h1>
             </div>
-    </header>
-
-	<div class="row top-margin dropdown">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort
-			<span class="caret"></span></button>
-			<ul class="dropdown-menu">
-			    <li><a href="#/filter/feeslh/{{param}}">By Fees (Low to High)</a></li>
-			    <li><a href="#/filter/feeshl/{{param}}">By Fees (High to Low)</a></li>
-			    <li><a href="#/filter/area/{{param}}">By Area</a></li>
-			    <li><a href="#/filter/experience/{{param}}">By Experience</a></li>
-			    <li><a href="#/filter/workshop/{{param}}">By Workshop</a></li>
-			    <li><a href="#/filter/language/{{param}}">By Language</a></li>
-			</ul>
-	</div> 
+    </header> 
 
 
 	<div class="row top-margin">
@@ -26,7 +13,7 @@
 
 					<article class="col-sm-3 isotopeItem" ng-repeat="trainer in trainerData">
 						<div class="portfolio-item">
-							<img src="assets/images/{{trainer.image}}" />
+							<img src="assets/images/profile/{{trainer.image}}" />
 								<div class="portfolio-desc align-center">
 									<div class="folio-info">
 										<a href="#/videos/{{trainer.serviceType}}/{{trainer._id}}" class="fancybox">
@@ -34,7 +21,7 @@
 											<i class="fa fa-link fa-2x"></i></a>
 									</div>
 								</div>
-								{{trainer.Name}}, &nbsp;{{trainer.Fees}}, &nbsp; {{trainer.serviceType}}
+								{{trainer.Name}}, &nbsp;{{trainer.area}}
 						</div>
 					</article>				
 				</div>
