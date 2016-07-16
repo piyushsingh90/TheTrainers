@@ -45,7 +45,7 @@ exports.getTrainer=function(req,resp,id,category){
 }
 
 
-exports.updateTrainer=function(req,resp,id,category,updatedData){
+/*exports.updateTrainer=function(req,resp,id,category,updatedData){
 	db.dbs.collection(category).updateOne({"_id": new ObjectId(id)},{$set:{updatedData}}, function(err, data) {
 		if(!err){
 			httpMsgs.send200(req,resp);
@@ -55,5 +55,5 @@ exports.updateTrainer=function(req,resp,id,category,updatedData){
 			httpMsgs.show500(req,resp,err);	
 		}
   });
-}
+}*/
 
