@@ -28,6 +28,10 @@
 			                    templateUrl: 'videosView.html',
 			                    controller: 'VideoController'
 			                }).
+			                when('/Workshop', {
+			                    templateUrl: 'workshopView.html',
+			                    controller: 'WorkShopController'
+			                }).
 			                when('/:param', {
 			                    templateUrl: 'coursesView.html',
 			                    controller: 'TrainerController'
@@ -43,6 +47,11 @@
 
 			module.config(function($sceProvider) {
 			  $sceProvider.enabled(false);
+			});
+
+			module.controller("WorkShopController", function($scope,$routeParams,$http) {
+					
+
 			});
 
 			
@@ -206,7 +215,7 @@
 						]}
 
 						]},
-					{ display: 'Workshops', href: '#', children: []},
+					{ display: 'Workshops', href: '#/Workshop', children: []},
 					{ display: 'Contact', href: '#/contact', children: []}
 					];
 				});
