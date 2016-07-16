@@ -16,6 +16,6 @@ exports.url ='mongodb://TECHUSER:TECHUSR@ds017175.mlab.com:17175/testandtrain';
 
 //exports.url = 'mongodb://localhost:27017/trainers';
 
-exports.webPort = 80;
+exports.webPort = 8080;
 
 exports.httpMsgsFormat = "JSON";
