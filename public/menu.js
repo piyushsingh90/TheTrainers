@@ -80,10 +80,10 @@
 			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
 					$scope.id = $routeParams.param2;
-					console.log()
+					
 					//var parameter = $scope.param;
 					//console.log('Video param ' + parameter);
-
+					
 
 					$scope.trainerVideoData = [];
 									    					
@@ -170,6 +170,10 @@
 					var parameter = $scope.param;
 					$scope.trainerData = [];
 
+					$scope.headerText = parameter.replace(/[a-z][A-Z]/g, function(str, offset) {
+					    return str[0] + ' ' + str[1];
+					});
+
 					if(parameter !== undefined){
 						console.log(parameter);
 						$http.get("/trainer/"+ parameter)
@@ -190,28 +194,49 @@
 						{ display: 'Fitness', href: '#', children: [
 															{ display: 'Yoga', href: '#/Yoga', children: []},
 															{ display: 'Exercise', href: '#/Exercise', children: []},
-															{ display: 'Aerobics', href: '#/Aerobics', children: []}
-						]},
-
-						{ display: 'Dance', href: '#', children: [
-															{ display: 'Dance', href: '#/Dance', children: []},
+															{ display: 'Fitness', href: '#/Fitness', children: []},
+															{ display: 'Aerobics', href: '#/Aerobics', children: []},
 															{ display: 'Zumba', href: '#/Zumba', children: []}
 						]},
 
-						{ display: 'Music', href: '#/Music', children: []},
+						{ display: 'Dance', href: '#', children: [
+															{ display: 'Classical', href: '#/ClassicalDance', children: []},
+															{ display: 'Western', href: '#/WesternDance', children: []},
+															{ display: 'Zumba', href: '#/Zumba', children: []},
+															{ display: 'Hip Hop', href: '#/HipHop', children: []},
+															{ display: 'Other Dance', href: '#/Dance', children: []}
+						]},
+
+						{ display: 'Music', href: '#/', children: [
+															{ display: 'Guitar', href: '#/Guitar', children: []},
+															{ display: 'Others', href: '#/Music', children: []}
+															
+						]},
 
 						{ display: 'Cooking', href: '#', children: [
 															{ display: 'Cooking', href: '#/Cooking', children: []},
-															{ display: 'Baking', href: '#/Baking', children: []},
+															{ display: 'Baking', href: '#/Baking', children: []}
 						]},
+
+						{ display: 'Cricket', href: '#/Cricket', children: []},
 
 						{ display: 'Painting', href: '#/Painting', children: []},
 
-						{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
+						{ display: 'Photography', href: '#/Photography', children: []},
+
+						{ display: 'Art', href: '#', children: [
+															{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
+															{ display: 'Calligraphy', href: '#/Calligraphy', children: []},
+															{ display: 'Martial Arts', href: '#/MartialArt', children: []}
+						]},
+
+						{ display: 'Foreign Language', href: '#', children: [
+															{ display: 'Spanish', href: '#/Spanish', children: []}
+															
+						]},
 
 						{ display: 'Others', href: '#', children: [
-															{ display: 'Photography', href: '#/Photography', children: []},
-															{ display: 'Foreign Language', href: '#/ForeignLanguage', children: []},
+															
 						]}
 
 						]},

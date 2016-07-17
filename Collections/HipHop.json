@@ -1,0 +1,34 @@
+{ 
+    "_id" : ObjectId("578b6c4e9f3bd10d80cadc02"), 
+    "Name" : "Noel Murmu", 
+    "Fees" : "Rs 1000/month", 
+    "serviceType" : "HipHop", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Joka", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years", 
+    "phone" : [
+        "8981305559"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b6c649f3bd10d80cadc04"), 
+    "Name" : "Souvik Patra", 
+    "Fees" : "Rs 500-700/month", 
+    "serviceType" : "HipHop", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "'DANCE BANGLA DANCE' Back-up Dancer", 
+    "phone" : [
+        "8443003105"
+    ]
+}

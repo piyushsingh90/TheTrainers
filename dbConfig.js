@@ -14,7 +14,7 @@ exports.upload = multer({ storage : storage}).single('userPhoto');
 
 exports.url ='mongodb://TECHUSER:TECHUSR@ds017175.mlab.com:17175/testandtrain';
 
-//exports.url = 'mongodb://localhost:27017/trainers';
+//exports.url = 'mongodb://localhost:27017/testandtrain';
 
 exports.webPort = 8080;
 

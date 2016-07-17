@@ -1,34 +1,173 @@
 { 
-    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
-    "Name" : "First Name", 
-    "Fees" : "Rs 4000", 
+    "_id" : ObjectId("578b21789f3bd10d80cadbde"), 
+    "Name" : "Shanti Karmakar", 
+    "Fees" : "Rs 400-500/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "No", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali", 
+    "place" : "Student", 
+    "noOfClasses" : "N/A", 
+    "image" : "profile.jpg", 
+    "experience" : "over 20 years", 
+    "phone" : "9775619599"
+}
+{ 
+    "_id" : ObjectId("578b6db89f3bd10d80cadc06"), 
+    "Name" : "Moumi Banerjee", 
+    "Fees" : "Rs 500-1000/month", 
     "serviceType" : "Cooking", 
     "openToWorkshops" : "Yes", 
-    "area" : "Madhapur", 
-    "privateOrGroup" : "private", 
-    "languages" : "hindi,english", 
-    "place" : "Yours", 
-    "noOfClasses" : "4", 
-    "image" : "trainer1.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "area" : "Kalitala", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Bengali, English, Hindi", 
+    "place" : "N/A", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "N/A", 
+    "phone" : "8697572637"
+}
+{ 
+    "_id" : ObjectId("578b6e229f3bd10d80cadc08"), 
+    "Name" : "Chaitali Mandal", 
+    "Fees" : "Rs 1000-1200/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Salt Lake", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English, Spanish", 
+    "place" : "N/A", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "Among 'TOP 10' In YOUNG CHEF INDIA SCHOOL, IIHM & NDTV GOODTIMES", 
+    "phone" : [
+        "9038776886", 
+        "8016026626"
     ]
 }
 { 
-    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
-    "Name" : "Second Name", 
-    "Fees" : "Rs 5000", 
+    "_id" : ObjectId("578b6ecf9f3bd10d80cadc0a"), 
+    "Name" : "Ishita RAi Dewan", 
+    "Fees" : "Rs 500/class", 
     "serviceType" : "Cooking", 
-    "openToWorkshops" : "No", 
-    "area" : "hitech", 
-    "privateOrGroup" : "group", 
-    "languages" : "bengali,english", 
-    "place" : "Mine", 
-    "noOfClasses" : "7", 
-    "image" : "trainer2.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "openToWorkshops" : "Yes", 
+    "area" : "Jadavpur", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Nepali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "Cooked for private parties/events", 
+    "phone" : [
+        "7278406697", 
+        "8820651592"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b6f7c9f3bd10d80cadc0c"), 
+    "Name" : "Nilima Shah", 
+    "Fees" : "Rs 750-1500/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Bondel Road", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Gujarati, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1-2", 
+    "image" : "profile.jpg", 
+    "experience" : "5-10 years", 
+    "phone" : [
+        "9830693053"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b6fe69f3bd10d80cadc0e"), 
+    "Name" : "Avijit Das", 
+    "Fees" : "Rs 700-800/class", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Hooghly", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "15 years", 
+    "phone" : [
+        "9051854849", 
+        "8961210388"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b70469f3bd10d80cadc10"), 
+    "Name" : "Jagriti Desai", 
+    "Fees" : "Rs 900-1000/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Bhowanipore", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2-3", 
+    "image" : "profile.jpg", 
+    "experience" : "30 years", 
+    "phone" : [
+        "9681603650", 
+        "9681249419"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b70b99f3bd10d80cadc12"), 
+    "Name" : "Pinki Tahlani", 
+    "Fees" : "Rs 1500-2000/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years", 
+    "phone" : [
+        "9051351516", 
+        "9836694755"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b70f59f3bd10d80cadc14"), 
+    "Name" : "Shikha Agarwal", 
+    "Fees" : "Rs 5000=6000/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "near Science City", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "Organised Workshops", 
+    "phone" : [
+        "9163754918", 
+        "9477303792"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b715e9f3bd10d80cadc16"), 
+    "Name" : "Oindrila Paul", 
+    "Fees" : "Rs 6000/month", 
+    "serviceType" : "Cooking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Bidhannagar", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "6 Years, Cooked for FETES, been Teaching for 4 Months", 
+    "phone" : [
+        "9163520272", 
+        "8100365759"
     ]
 }

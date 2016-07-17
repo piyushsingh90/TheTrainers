@@ -1,34 +1,156 @@
 { 
-    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
-    "Name" : "First Name", 
-    "Fees" : "Rs 4000", 
+    "_id" : ObjectId("578b78fb9f3bd10afca2ca82"), 
+    "Name" : "Dhiman Das", 
+    "Fees" : "Rs 500-1000/month", 
     "serviceType" : "Exercise", 
     "openToWorkshops" : "Yes", 
-    "area" : "Madhapur", 
-    "privateOrGroup" : "private", 
-    "languages" : "hindi,english", 
-    "place" : "Yours", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
     "noOfClasses" : "4", 
-    "image" : "trainer1.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "image" : "profile.jpg", 
+    "experience" : "6 months", 
+    "phone" : [
+        "9874612710"
     ]
 }
 { 
-    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
-    "Name" : "Second Name", 
-    "Fees" : "Rs 5000", 
+    "_id" : ObjectId("578b79539f3bd10afca2ca84"), 
+    "Name" : "Rakesh Kaul", 
+    "Fees" : "Rs 2400-3200/month", 
     "serviceType" : "Exercise", 
     "openToWorkshops" : "No", 
-    "area" : "hitech", 
-    "privateOrGroup" : "group", 
-    "languages" : "bengali,english", 
-    "place" : "Mine", 
-    "noOfClasses" : "7", 
-    "image" : "trainer2.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "4", 
+    "image" : "profile.jpg", 
+    "experience" : "22 years", 
+    "phone" : [
+        "9836487338", 
+        "033-24404342"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b79b69f3bd10afca2ca86"), 
+    "Name" : "Anirban Ray", 
+    "Fees" : "Rs 6000-8000/month", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi", 
+    "place" : "Student", 
+    "noOfClasses" : "4-6", 
+    "image" : "profile.jpg", 
+    "experience" : "trainer at TALWALKERS for 4 years", 
+    "phone" : [
+        "7278757489"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7a1b9f3bd10afca2ca88"), 
+    "Name" : "Danish Khan", 
+    "Fees" : "Rs 800-1500/month", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Mominpur", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi, English, Punjabi, Nepali, Arabic", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "N/A", 
+    "image" : "profile.jpg", 
+    "experience" : "trainer at FITNESS POINT and REVOLUTION", 
+    "phone" : [
+        "8017422717"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7a989f3bd10afca2ca8a"), 
+    "Name" : "Gopal Das", 
+    "Fees" : "Rs 1000/class", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Mominpur", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "2-5 years", 
+    "phone" : [
+        "8961704011", 
+        "827405311"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7afd9f3bd10afca2ca8c"), 
+    "Name" : "Abhishek Kumar", 
+    "Fees" : "Rs 2000-3000/month", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "2-5 years", 
+    "phone" : [
+        "9073019578"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7b479f3bd10afca2ca8e"), 
+    "Name" : "Pritam Ganguly", 
+    "Fees" : "Rs 6000-15000/month", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years", 
+    "phone" : [
+        "9007654746"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7bb49f3bd10afca2ca90"), 
+    "Name" : "Satyajit Moitra", 
+    "Fees" : "Rs 250/class", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years", 
+    "phone" : [
+        "9007891288", 
+        "8981589837"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b7bf99f3bd10afca2ca92"), 
+    "Name" : "Vikash Prasad", 
+    "Fees" : "Rs 800-2000/month", 
+    "serviceType" : "Exercise", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "1 year", 
+    "phone" : [
+        "9163103822"
     ]
 }

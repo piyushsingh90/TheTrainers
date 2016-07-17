@@ -1,34 +1,105 @@
 { 
-    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
-    "Name" : "First Name", 
-    "Fees" : "Rs 4000", 
+    "_id" : ObjectId("578b1d4f9f3bd10d80cadbd0"), 
+    "Name" : "Chaitali Mandal", 
+    "Fees" : "Rs 1000-1200/month", 
     "serviceType" : "Baking", 
     "openToWorkshops" : "Yes", 
-    "area" : "Madhapur", 
-    "privateOrGroup" : "private", 
-    "languages" : "hindi,english", 
-    "place" : "Yours", 
-    "noOfClasses" : "4", 
-    "image" : "trainer1.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
-    ]
+    "area" : "Salt Lake", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English, Spanish", 
+    "place" : "N/A", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "Among 'TOP 10' In YOUNG CHEF INDIA SCHOOL, IIHM And NDTV GOODTIMES", 
+    "phone" : "9038776886"
 }
 { 
-    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
-    "Name" : "Second Name", 
-    "Fees" : "Rs 5000", 
+    "_id" : ObjectId("578b1e019f3bd10d80cadbd2"), 
+    "Name" : "Jamila Dhamangamwala", 
+    "Fees" : "Rs 2000/month", 
     "serviceType" : "Baking", 
-    "openToWorkshops" : "No", 
-    "area" : "hitech", 
-    "privateOrGroup" : "group", 
-    "languages" : "bengali,english", 
-    "place" : "Mine", 
-    "noOfClasses" : "7", 
-    "image" : "trainer2.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
-    ]
+    "openToWorkshops" : "Yes", 
+    "area" : "Rafi Ahmed Kidwai Road", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Hindi, English", 
+    "place" : "N/A", 
+    "noOfClasses" : "N/A", 
+    "image" : "profile.jpg", 
+    "experience" : "N/A", 
+    "phone" : "9830306679"
+}
+{ 
+    "_id" : ObjectId("578b1e7c9f3bd10d80cadbd4"), 
+    "Name" : "Nisha Oswal", 
+    "Fees" : "Rs 1500-2000/month", 
+    "serviceType" : "Baking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "BaghBazar", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "4 years", 
+    "phone" : "9674575272"
+}
+{ 
+    "_id" : ObjectId("578b1ed89f3bd10d80cadbd6"), 
+    "Name" : "Minu Khemka", 
+    "Fees" : "Rs 700-1200/class", 
+    "serviceType" : "Baking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "South City Gardens", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "1 year", 
+    "phone" : "9831093678"
+}
+{ 
+    "_id" : ObjectId("578b1f3d9f3bd10d80cadbd8"), 
+    "Name" : "Nilima Shah", 
+    "Fees" : "Rs 750-1500/month", 
+    "serviceType" : "Baking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Bondel Road", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Gujarati, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1-2", 
+    "image" : "profile.jpg", 
+    "experience" : "5-10 years", 
+    "phone" : "9830693053"
+}
+{ 
+    "_id" : ObjectId("578b1fe79f3bd10d80cadbda"), 
+    "Name" : "Pinki Tahlani", 
+    "Fees" : "Rs 1500-2000/month", 
+    "serviceType" : "Baking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years", 
+    "phone" : "9051351516"
+}
+{ 
+    "_id" : ObjectId("578b20429f3bd10d80cadbdc"), 
+    "Name" : "Oindrila Paul", 
+    "Fees" : "Rs 6000/month", 
+    "serviceType" : "Baking", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Bidhannagar", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "6 Years, Cooked For FETES, Been Teaching for 4 Months", 
+    "phone" : "9163520272"
 }

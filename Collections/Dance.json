@@ -1,34 +1,223 @@
 { 
-    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
-    "Name" : "First Name", 
-    "Fees" : "Rs 4000", 
+    "_id" : ObjectId("578b27d19f3bd10d80cadbe6"), 
+    "Name" : "Gaurav Bindra", 
+    "Fees" : "Rs 3500-5000/month", 
     "serviceType" : "Dance", 
     "openToWorkshops" : "Yes", 
-    "area" : "Madhapur", 
-    "privateOrGroup" : "private", 
-    "languages" : "hindi,english", 
-    "place" : "Yours", 
-    "noOfClasses" : "4", 
-    "image" : "trainer1.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "area" : "Bhawanipore", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "5 years of professional dance instructor", 
+    "phone" : "7278240100"
+}
+{ 
+    "_id" : ObjectId("578b28629f3bd10d80cadbe8"), 
+    "Name" : "Solanki Dev", 
+    "Fees" : "Rs 1000/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Behala", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "private training", 
+    "phone" : [
+        "8820827145", 
+        "9674016180"
     ]
 }
 { 
-    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
-    "Name" : "Second Name", 
-    "Fees" : "Rs 5000", 
+    "_id" : ObjectId("578b28b19f3bd10d80cadbea"), 
+    "Name" : "Sukanta Banerjee", 
+    "Fees" : "Rs 800-2500/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Gariahat", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "teaching in an institute named PATHSHALA", 
+    "phone" : "9830679720"
+}
+{ 
+    "_id" : ObjectId("578b29189f3bd10d80cadbec"), 
+    "Name" : "Vedika Goenka", 
+    "Fees" : "Rs 1500/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "over 5 years", 
+    "phone" : "9331821882"
+}
+{ 
+    "_id" : ObjectId("578b29689f3bd10d80cadbee"), 
+    "Name" : "Ashveen Kaur Batra", 
+    "Fees" : "Rs 600-750/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Diamond Harbour Road", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Punjabi, Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "conducted various workshops", 
+    "phone" : [
+        "8017790977", 
+        "8420780223"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2d729f3bd10d80cadbf0"), 
+    "Name" : "Sarodia Guha", 
+    "Fees" : "Rs 500/month", 
     "serviceType" : "Dance", 
     "openToWorkshops" : "No", 
-    "area" : "hitech", 
-    "privateOrGroup" : "group", 
-    "languages" : "bengali,english", 
-    "place" : "Mine", 
-    "noOfClasses" : "7", 
-    "image" : "trainer2.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "2 years", 
+    "phone" : [
+        "8820457961"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2de39f3bd10d80cadbf2"), 
+    "Name" : "Bindia Kainth", 
+    "Fees" : "Rs 500/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Park Street", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "10 years", 
+    "phone" : [
+        "9831261640", 
+        "9831632702"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2e599f3bd10d80cadbf4"), 
+    "Name" : "Shashi Jha", 
+    "Fees" : "Rs 500/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Santoshpur", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "10 years", 
+    "phone" : [
+        "9748035965"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2ef29f3bd10d80cadbf8"), 
+    "Name" : "Anushila Chaterjee", 
+    "Fees" : "Rs 500-700/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Dum Dum", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "1 year", 
+    "phone" : [
+        "9830155584", 
+        "8017962261"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2f4a9f3bd10d80cadbfa"), 
+    "Name" : "Ishita Panda", 
+    "Fees" : "Rs 150/class", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "10 years", 
+    "phone" : [
+        "8902392814", 
+        "9477493240"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b2fab9f3bd10d80cadbfc"), 
+    "Name" : "Prathirta Mukherjee", 
+    "Fees" : "Rs 400-700/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Ruby", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "1 year", 
+    "phone" : [
+        "9903877263", 
+        "9903393363"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b30049f3bd10d80cadbfe"), 
+    "Name" : "Labity Sunny", 
+    "Fees" : "Rs 1000/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Alipore", 
+    "privateOrGroup" : "Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "4 years", 
+    "phone" : [
+        "9681253504", 
+        "7059253718"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b305e9f3bd10d80cadc00"), 
+    "Name" : "Neha Kaur", 
+    "Fees" : "Rs 800-1500/month", 
+    "serviceType" : "Dance", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Maddox Square", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "2", 
+    "image" : "profile.jpg", 
+    "experience" : "N/A", 
+    "phone" : [
+        "9830210234", 
+        "8981679398"
     ]
 }

@@ -1,34 +1,106 @@
 { 
-    "_id" : ObjectId("577bde22cf9370ab1a69678e"), 
-    "Name" : "First Name", 
-    "Fees" : "Rs 4000", 
+    "_id" : ObjectId("578b734b9f3bd10afca2ca74"), 
+    "Name" : "Rakesh Kaul", 
+    "Fees" : "Rs 2400-3200/month", 
     "serviceType" : "Yoga", 
-    "openToWorkshops" : "Yes", 
-    "area" : "Madhapur", 
-    "privateOrGroup" : "private", 
-    "languages" : "hindi,english", 
-    "place" : "Yours", 
+    "openToWorkshops" : "No", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
     "noOfClasses" : "4", 
-    "image" : "trainer1.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "image" : "profile.jpg", 
+    "experience" : "22 years", 
+    "phone" : [
+        "9836487338", 
+        "033-24404342"
     ]
 }
 { 
-    "_id" : ObjectId("577bde59cf9370ab1a69678f"), 
-    "Name" : "Second Name", 
-    "Fees" : "Rs 5000", 
+    "_id" : ObjectId("578b73f29f3bd10afca2ca76"), 
+    "Name" : "Romita Bose", 
+    "Fees" : "Rs 6800-12300/month", 
     "serviceType" : "Yoga", 
     "openToWorkshops" : "No", 
-    "area" : "hitech", 
-    "privateOrGroup" : "group", 
-    "languages" : "bengali,english", 
-    "place" : "Mine", 
-    "noOfClasses" : "7", 
-    "image" : "trainer2.jpg", 
-    "videos" : [
-        "https://www.youtube.com/embed/oOZ5CYlK5yA", 
-        "https://www.youtube.com/embed/ha1269QWpJM"
+    "area" : "South Kolkata", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "16 years, certified Nike Trainer", 
+    "phone" : [
+        "9903526117", 
+        "9051135313"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b74619f3bd10afca2ca78"), 
+    "Name" : "Kamala Saha", 
+    "Fees" : "Rs 500/day", 
+    "serviceType" : "Yoga", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Hindi, Bengali", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "As per requirement", 
+    "image" : "profile.jpg", 
+    "experience" : "over 16 years", 
+    "phone" : [
+        "9143933179"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b74b69f3bd10afca2ca7a"), 
+    "Name" : "Arijit Chakraborty", 
+    "Fees" : "Rs 1000-1200/month", 
+    "serviceType" : "Yoga", 
+    "openToWorkshops" : "No", 
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private", 
+    "languages" : "Bengali, Hindi", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "4", 
+    "image" : "profile.jpg", 
+    "experience" : "yoga trainer at ATK football team", 
+    "phone" : [
+        "7044090535", 
+        "9874778877"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b76109f3bd10afca2ca7c"), 
+    "Name" : "Soumyadip Bhattacharya", 
+    "Fees" : "Rs 500-1600/month", 
+    "serviceType" : "Yoga", 
+    "openToWorkshops" : "Yes", 
+    "area" : "N/A", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student", 
+    "noOfClasses" : "1-3", 
+    "image" : "profile.jpg", 
+    "experience" : "5-10 years", 
+    "phone" : [
+        "9874803936", 
+        "9051060159"
+    ]
+}
+{ 
+    "_id" : ObjectId("578b767b9f3bd10afca2ca7e"), 
+    "Name" : "Ruma Sharma", 
+    "Fees" : "Rs 300-500/day", 
+    "serviceType" : "Yoga", 
+    "openToWorkshops" : "Yes", 
+    "area" : "S.P Mukherjee Road", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "3", 
+    "image" : "profile.jpg", 
+    "experience" : "10 years", 
+    "phone" : [
+        "9681987387"
     ]
 }

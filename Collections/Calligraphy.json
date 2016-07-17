@@ -1,0 +1,15 @@
+{ 
+    "_id" : ObjectId("578b22c69f3bd10d80cadbe0"), 
+    "Name" : "Purvita Shah", 
+    "Fees" : "Rs 1000-5000/month", 
+    "serviceType" : "Calligraphy", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Beltala", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, English, Hindi", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1-2", 
+    "image" : "profile.jpg", 
+    "experience" : "over 7 years", 
+    "phone" : "9038221091"
+}

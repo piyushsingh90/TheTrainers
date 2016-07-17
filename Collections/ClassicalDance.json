@@ -1,0 +1,30 @@
+{ 
+    "_id" : ObjectId("578b24c19f3bd10d80cadbe2"), 
+    "Name" : "Sarannya Bannerjee", 
+    "Fees" : "Rs 400-700/month", 
+    "serviceType" : "Classical", 
+    "openToWorkshops" : "Yes", 
+    "area" : "Howrah", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "1 year", 
+    "phone" : "8961135803"
+}
+{ 
+    "_id" : ObjectId("578b272e9f3bd10d80cadbe4"), 
+    "Name" : "Indrani Mukherjee", 
+    "Fees" : "Rs 200-550/month", 
+    "serviceType" : "Classical", 
+    "openToWorkshops" : "No", 
+    "area" : "Hooghly", 
+    "privateOrGroup" : "Private, Group", 
+    "languages" : "Bengali, Hindi, English", 
+    "place" : "Student, Trainer", 
+    "noOfClasses" : "1", 
+    "image" : "profile.jpg", 
+    "experience" : "3 years", 
+    "phone" : "9038864355"
+}
