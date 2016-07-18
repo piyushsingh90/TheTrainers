@@ -209,6 +209,8 @@
 
 						{ display: 'Music', href: '#/', children: [
 															{ display: 'Guitar', href: '#/Guitar', children: []},
+															{ display: 'Violin', href: '#/Violin', children: []},
+															{ display: 'Drums', href: '#/Drums', children: []},
 															{ display: 'Others', href: '#/Music', children: []}
 															
 						]},
@@ -236,7 +238,7 @@
 						]},
 
 						{ display: 'Others', href: '#', children: [
-															
+															{ display: 'Athletics', href: '#/Athletics', children: []}
 						]}
 
 						]},
