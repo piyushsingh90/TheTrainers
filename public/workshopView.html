@@ -7,23 +7,118 @@
             </div>
     </header>
 <div ng-repeat="workshop in workshops">
-    <div class="row top-margin" >
-        <div class="col-md-12">
-            <img class="img-responsive" src="assets/images/workshop/{{workshop.image}}" alt="">
-        </div>
-  </div>
 
     <div class="row top-margin">
         <div class="col-md-10 col-md-offset-1 bs-callout bs-callout-primary">
-            <h4>{{workshop.heading}}</h4>
+        	<div class="row">
+	        	<div class="col-md-10">
+	            	<h4>{{workshop.heading}}</h4>
+	        	</div>
+	        	<div class="col-md-2">
+  					<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#{{workshop._id}}">Details
+  					</button>
+	        	</div>
+        	</div>
 
-            <span class="label">Date: {{workshop.date}}</span>
+            <span class="label">Date: {{workshop.date | date: mediumDate}}</span>
             <span class="label">Time: {{workshop.time}}</span>
             <span class="label">Venue: {{workshop.venue}}</span>
             <p>{{workshop.description}}</p>
+
         </div>
     </div>
- </div>
+ 
 
+	 <div class="modal fade" id="578e57d7bebd0d0a1cc3765b" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e57d7bebd0d0a1cc3765b.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578d89486fbff008cc51560e" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578d89486fbff008cc51560e.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e5d3bbebd0d0a1cc3765d" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e5d3bbebd0d0a1cc3765d.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e6033bebd0d0a1cc3765f" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e6033bebd0d0a1cc3765f.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e630dbebd0d144033ef30" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e630dbebd0d144033ef30.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e639dbebd0d144033ef32" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e639dbebd0d144033ef32.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e64a3bebd0d0140d0c866" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e64a3bebd0d0140d0c866.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</div>
    
 </div>

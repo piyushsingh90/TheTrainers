@@ -241,12 +241,15 @@
 						]},
 
 						{ display: 'Foreign Language', href: '#', children: [
-															{ display: 'Spanish', href: '#/Spanish', children: []}
+															{ display: 'Spanish', href: '#/Spanish', children: []},
+															{ display: 'Japanese', href: '#/Japanese', children: []}
 															
 						]},
 
 						{ display: 'Others', href: '#', children: [
-															{ display: 'Athletics', href: '#/Athletics', children: []}
+															{ display: 'Athletics', href: '#/Athletics', children: []},
+															{ display: 'Fashion', href: '#/Fashion', children: []},
+															{ display: 'Embroidery', href: '#/Embroidery', children: []}
 						]}
 
 						]},
