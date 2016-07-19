@@ -1,6 +1,7 @@
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var courses = require('../controllers/courses');
+var workshop = require('../controllers/workshop');
 var trainer = require('../controllers/trainer');
 var sms = require('../controllers/sms');
 var db = require('../core/db');
@@ -77,5 +78,10 @@ exports.serve=function(app,express){
 	app.post('/sms',function(req,resp){
 		sms.sendSMS(req,resp,req.body);
 	})
+
+//for workshop
+	app.get('/workshop',function(req,resp){
+        workshop.getWorkshopDetails(req,resp);
+    })
 }
 

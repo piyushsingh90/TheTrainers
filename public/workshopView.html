@@ -1,28 +1,29 @@
 <div ng-controller="WorkShopController">
 
-	<header id="head" class="secondary">
+    <header id="head" class="secondary">
             <div class="container">
                     <h1>Workshops</h1>
                     <p>Coming Up....</p>
             </div>
-	</header> 
-
-	<div class="row top-margin">
-		<div class="col-md-12">
-            <img class="img-responsive" src="assets/images/workshop/workshop.jpg" alt="">
-		</div>
-    </div>
+    </header>
+<div ng-repeat="workshop in workshops">
+    <div class="row top-margin" >
+        <div class="col-md-12">
+            <img class="img-responsive" src="assets/images/workshop/{{workshop.image}}" alt="">
+        </div>
+  </div>
 
     <div class="row top-margin">
-		<div class="col-md-10 col-md-offset-1 bs-callout bs-callout-primary">
-			<h4>DANCE WORKSHOP TO BE CONDUCTED BY GAURAV BINDRA</h4>
+        <div class="col-md-10 col-md-offset-1 bs-callout bs-callout-primary">
+            <h4>{{workshop.heading}}</h4>
 
-			<span class="label">Date: 14TH AUGUST 2016</span>
-			<span class="label">Time: 4 PM -7 PM</span>
-			<span class="label">Venue: 31/1 A CHAKRABERIA ROAD SOUTH KOLKATA 700025</span>
-			<p>URBAN DANCE STYLE, LOCKING AND HOUSE</p>
-		</div>
+            <span class="label">Date: {{workshop.date}}</span>
+            <span class="label">Time: {{workshop.time}}</span>
+            <span class="label">Venue: {{workshop.venue}}</span>
+            <p>{{workshop.description}}</p>
+        </div>
     </div>
+ </div>
 
-	
+   
 </div>

@@ -50,7 +50,15 @@
 			});
 
 			module.controller("WorkShopController", function($scope,$routeParams,$http) {
-					
+					$scope.workshops = [];
+                    $http.get("/workshop")
+                        .then(function(response) {
+                        console.log(response.data);
+                        $scope.workshops = response.data;
+                    }, function(response) {
+                        console.log('error '+ response);
+                        $scope.workshop = "Something went wrong";
+                    });
 
 			});
 
