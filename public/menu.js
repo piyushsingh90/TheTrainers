@@ -49,6 +49,34 @@
 			  $sceProvider.enabled(false);
 			});
 
+			module.run(function ($rootScope, $location,$route, $timeout) {
+
+			    $rootScope.config = {};
+			    $rootScope.config.app_url = $location.url();
+			    $rootScope.config.app_path = $location.path();
+			    $rootScope.layout = {};
+			    $rootScope.layout.loading = false;
+
+			    $rootScope.$on('$routeChangeStart', function () {
+			        //show loading gif
+			        $timeout(function(){
+			          $rootScope.layout.loading = true;          
+			        });
+			    });
+			    $rootScope.$on('$routeChangeSuccess', function () {
+			        //hide loading gif
+			        $timeout(function(){
+			          $rootScope.layout.loading = false;
+			        }, 200);
+			    });
+			    $rootScope.$on('$routeChangeError', function () {
+
+			        //hide loading gif
+			        $rootScope.layout.loading = false;
+
+			    });
+			});
+
 			module.controller("WorkShopController", function($scope,$routeParams,$http) {
 					$scope.workshops = [];
                     $http.get("/workshop")
@@ -100,8 +128,6 @@
 						
 						$http.get("/trainer/"+ $scope.subCategory+"/"+$scope.id)
 						    .then(function(response) {
-						        console.log(response.data[0]);
-						        console.log(response.data[1]);
 						        $scope.trainerVideoData = response.data[0];
 						    }, function(response) {
 						        console.log('error '+ response);

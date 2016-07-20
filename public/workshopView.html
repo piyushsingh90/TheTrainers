@@ -1,4 +1,4 @@
-<div ng-controller="WorkShopController">
+<div ng-controller="WorkShopController" style="min-height: 600px;">
 
     <header id="head" class="secondary">
             <div class="container">
@@ -6,7 +6,12 @@
                     <p>Coming Up....</p>
             </div>
     </header>
-<div ng-repeat="workshop in workshops">
+
+    
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+	<div ng-repeat="workshop in workshops">
+
 
     <div class="row top-margin">
         <div class="col-md-10 col-md-offset-1 bs-callout bs-callout-primary">

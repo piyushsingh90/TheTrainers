@@ -1,30 +1,66 @@
-<div ng-controller="VideoController">
+<div ng-controller="VideoController" style="min-height: 600px;">
 
 	<header id="head" class="secondary">
             <div class="container">
                     <h1>{{trainerVideoData.Name}}</h1>
-                    <b>Experience:</b> &nbsp; {{trainerVideoData.experience}} </br>
-                    <b>Fees:</b> &nbsp; {{trainerVideoData.Fees}} </br>
-                    <b>Area:</b> &nbsp; {{trainerVideoData.area}} </br>
+                    {{trainerVideoData.serviceType}}
             </div>
     </header>
 
+    
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
     <div class="row top-margin">
 		<div class="col-md-10">
-	    		<button type="button" class="btn btn-default" ng-click="open()">Get Details</button>
+	    		<button type="button" class="btn btn-default" ng-click="open()">Contact {{trainerVideoData.Name}} </button>
 		</div>
 	</div>
 
 
 	<div class="row top-margin">
-		<div class="col-md-12">
-			<div class="row">
+		<div class="col-md-6">
 				<div class="portfolio-items clearfix" id="2">
 					<article class="col-sm-6" ng-repeat="video in trainerVideoData.videos">
 						<iframe width="500" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>
 					</article>
 				</div>
-			</div>
+		</div>
+
+		<div class="col-md-6">
+			<table class="table table-striped">
+		  		<tr>
+		  			<td>Experience:</td>
+		  			<td>{{trainerVideoData.experience}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Fees:</td>
+		  			<td>{{trainerVideoData.Fees}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Area:</td>
+		  			<td>{{trainerVideoData.area}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>CLasses Per Week:</td>
+		  			<td>{{trainerVideoData.noOfClasses}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Languages Known:</td>
+		  			<td>{{trainerVideoData.languages}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Training At Student/Trainer Place ?</td>
+		  			<td>{{trainerVideoData.place}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Private/Group Training ?</td>
+		  			<td>{{trainerVideoData.privateOrGroup}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td>Open to Workshops ?</td>
+		  			<td>{{trainerVideoData.openToWorkshops}}</td>
+		  		</tr>
+			</table>
 		</div>
 	</div>
 
@@ -36,7 +72,7 @@
 
 <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
-            <h3 class="modal-title">We will send the coupon code to your mobile</h3>
+            <h3 class="modal-title">We will send the contact details to your mobile</h3>
         </div>
         <div class="modal-body">
 

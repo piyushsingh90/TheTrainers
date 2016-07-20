@@ -1,4 +1,4 @@
-<div ng-controller="TrainerController">
+<div ng-controller="TrainerController" 	style="min-height: 600px;">
 
 	<header id="head" class="secondary">
             <div class="container">
@@ -7,17 +7,22 @@
     </header> 
 
 
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+
 	<div class="row top-margin">
 		<div class="col-md-12">
+
 				<div class="portfolio-items isotopeWrapper clearfix" id="3">
 
 					<article class="col-sm-3 isotopeItem" ng-repeat="trainer in trainerData">
 						<div class="portfolio-item">
-							<img src="assets/images/profile/{{trainer.image}}" height="250" width="150"/>
+							<img src="assets/images/profile/{{trainer.image}}" class="img-rounded" height="300px" width="150px" />
+								 
 								<div class="portfolio-desc align-center">
 									<div class="folio-info">
 										<a href="#/videos/{{trainer.serviceType}}/{{trainer._id}}" class="fancybox">
-											<h5>Details</h5>
+											<h5>Videos</h5>
 											<i class="fa fa-link fa-2x"></i></a>
 									</div>
 								</div>
