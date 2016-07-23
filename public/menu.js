@@ -251,7 +251,8 @@
 
 						{ display: 'Cooking', href: '#', children: [
 															{ display: 'Cooking', href: '#/Cooking', children: []},
-															{ display: 'Baking', href: '#/Baking', children: []}
+															{ display: 'Baking', href: '#/Baking', children: []},
+															{ display: 'Ice Cream Making', href: '#/IceCreamMaking', children: []}
 						]},
 
 						{ display: 'Cricket', href: '#/Cricket', children: []},
@@ -263,6 +264,7 @@
 						{ display: 'Art', href: '#', children: [
 															{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
 															{ display: 'Calligraphy', href: '#/Calligraphy', children: []},
+															{ display: 'Sculpture', href: '#/Sculpture', children: []},
 															{ display: 'Martial Arts', href: '#/MartialArt', children: []}
 						]},
 
@@ -275,6 +277,9 @@
 						{ display: 'Others', href: '#', children: [
 															{ display: 'Athletics', href: '#/Athletics', children: []},
 															{ display: 'Fashion', href: '#/Fashion', children: []},
+															{ display: 'Computer', href: '#/Computer', children: []},
+															{ display: 'Skating', href: '#/Skating', children: []},
+															{ display: 'Jewellery Design', href: '#/JewelleryDesign', children: []},
 															{ display: 'Embroidery', href: '#/Embroidery', children: []}
 						]}
 
