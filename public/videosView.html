@@ -3,7 +3,7 @@
 	<header id="head" class="secondary">
             <div class="container">
                     <h1>{{trainerVideoData.Name}}</h1>
-                    {{trainerVideoData.serviceType}}
+                    {{subHeaderText}}
             </div>
     </header>
 
@@ -19,10 +19,14 @@
 
 	<div class="row top-margin">
 		<div class="col-md-6">
-				<div class="portfolio-items clearfix" id="2">
-					<article class="col-sm-6" ng-repeat="video in trainerVideoData.videos">
+				<div>
+					<article class="col-sm-6" ng-if="trainerVideoData.hasVideo" ng-repeat="video in trainerVideoData.videos">
 						<iframe width="500" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>
 					</article>
+
+					<div class="col-sm-6" ng-if="!trainerVideoData.hasVideo">
+						<img src="assets/images/video-coming-soon.jpg"   />
+					</div>
 				</div>
 		</div>
 

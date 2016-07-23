@@ -81,7 +81,6 @@
 					$scope.workshops = [];
                     $http.get("/workshop")
                         .then(function(response) {
-                        console.log(response.data);
                         $scope.workshops = response.data;
                     }, function(response) {
                         console.log('error '+ response);
@@ -110,45 +109,37 @@
 			module.controller("FilterController", function($scope,$routeParams,$http) {
 					$scope.param1 = $routeParams.param1;
 					$scope.param2 = $routeParams.param2;
-					console.log('Filter '+ $scope.param2 +' by ' + $scope.param1);
 			});
 
 			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
 					$scope.id = $routeParams.param2;
 					
-					//var parameter = $scope.param;
-					//console.log('Video param ' + parameter);
-					
-
 					$scope.trainerVideoData = [];
-									    					
 
 					if($scope.subCategory != undefined && $scope.id != undefined){
 						
 						$http.get("/trainer/"+ $scope.subCategory+"/"+$scope.id)
 						    .then(function(response) {
 						        $scope.trainerVideoData = response.data[0];
+
+						        $scope.trainerVideoData.hasVideo = (response.data[0].videos != undefined);
+
+						        $scope.subHeaderText = $scope.trainerVideoData.serviceType.replace(/[a-z][A-Z]/g, function(str, offset) {
+								    return str[0] + ' ' + str[1];
+								});		
 						    }, function(response) {
 						        console.log('error '+ response);
 						        $scope.trainerVideoData = "Something went wrong";
 						    });
 					}
 
-					$scope.isCollapsed = true;
-
-
-
-				  $scope.items = ['item1', 'item2', 'item3'];
-
 			  	  $scope.toMobile;
-
-				  $scope.animationsEnabled = true;
 
 				  $scope.open = function (size) {
 
 				    var modalInstance = $uibModal.open({
-				      animation: $scope.animationsEnabled,
+				      animation: 'true',
 				      templateUrl: 'myModalContent.html',
 				      controller: 'ModalInstanceCtrl',
 				      size: size,
@@ -162,14 +153,12 @@
 				    modalInstance.result.then(function (toMobile) {
 				    	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 				      $scope.toMobile = toMobile;
-				      $log.info('you entered: ' + toMobile);
 				      var msgBody = $scope.trainerVideoData;
 				      msgBody.mobile = toMobile;
 				      
 				      $http.post('/sms',$httpParamSerializerJQLike(msgBody))
 				      	.success(function(data){
 				      		console.log("message successfully sent to "+toMobile);
-				      		console.log(data);
 				      	})
 				      	.error(function(err){
 				      		console.log(err);
@@ -179,17 +168,11 @@
 				    });
 				  };
 
-				  $scope.toggleAnimation = function () {
-				    $scope.animationsEnabled = !$scope.animationsEnabled;
-				  };
-
 		});
 
 
 			module.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, toMobile) {
 				
-			  console.log("toMobile "+$scope.toMobile);
-
 			  $scope.ok = function (trainerVideoData) {
 			  	$uibModalInstance.close($scope.toMobile);
 			  };
@@ -209,7 +192,6 @@
 					});
 
 					if(parameter !== undefined){
-						console.log(parameter);
 						$http.get("/trainer/"+ parameter)
 						    .then(function(response) {
 						    		$scope.trainerData = response.data;
