@@ -93,7 +93,7 @@
 
 
 			module.controller("RouteController", function($scope,$routeParams,$http) {
-					$scope.myInterval = 10000;
+					$scope.myInterval = 3000;
 					  $scope.noWrapSlides = false;
 					  $scope.active = 0;
 					  var slides = $scope.slides = [];
@@ -101,6 +101,26 @@
 
 					  slides.push({
 					      image: 'assets/images/slides/banner.jpg',
+					      id: currIndex++
+					    });
+					  slides.push({
+					      image: 'assets/images/slides/banner2.jpg',
+					      id: currIndex++
+					    });
+					  slides.push({
+					      image: 'assets/images/slides/banner3.jpg',
+					      id: currIndex++
+					    });
+					  slides.push({
+					      image: 'assets/images/slides/banner4.jpg',
+					      id: currIndex++
+					    });
+					  slides.push({
+					      image: 'assets/images/slides/banner5.jpg',
+					      id: currIndex++
+					    });
+					  slides.push({
+					      image: 'assets/images/slides/banner6.jpg',
 					      id: currIndex++
 					    });
 
