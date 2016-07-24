@@ -15,8 +15,8 @@
 
 				<div class="portfolio-items isotopeWrapper clearfix" id="3">
 
-					<article class="col-sm-3 isotopeItem" ng-repeat="trainer in trainerData">
-						<div class="portfolio-item">
+					<article class="col-sm-3 isotopeItem" ng-repeat="trainer in trainerData track by trainer._id" index="trainer._id">
+						<div class="portfolio-item" >
 							<img src="assets/images/profile/{{trainer.image}}" class="img-rounded" height="300px" width="150px" />
 								 
 								<div class="portfolio-desc align-center">
@@ -26,7 +26,12 @@
 											<i class="fa fa-link fa-2x"></i></a>
 									</div>
 								</div>
-								{{trainer.Name}}, &nbsp;{{trainer.area}}
+								<table class="table">
+							  		<tr>
+							  			<td class="pic-subheader">{{trainer.Name}}</td>
+							  			<td class="pic-subheader" align="right">{{trainer.area}}</td>
+							  		</tr>
+		  						</table>
 						</div>
 					</article>				
 				</div>
