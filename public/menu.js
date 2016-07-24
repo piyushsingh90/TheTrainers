@@ -175,6 +175,7 @@
 				      $scope.toMobile = toMobile;
 				      var msgBody = $scope.trainerVideoData;
 				      msgBody.mobile = toMobile;
+				      		     
 				      
 				      $http.post('/sms',$httpParamSerializerJQLike(msgBody))
 				      	.success(function(data){
@@ -183,9 +184,11 @@
 				      	.error(function(err){
 				      		console.log(err);
 				      	});
-				    }, function () {
-				      $log.info('Modal dismissed at: ' + new Date());
-				    });
+					}, function () {
+					      $log.info('Modal dismissed at: ' + new Date());
+					});
+
+
 				  };
 
 		});

@@ -100,7 +100,7 @@
 
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="ok()">Yes, send me the details</button>
+            <button class="btn btn-primary" type="button" ng-click="ok()" ng-disabled="numberForm.$invalid">Yes, send me the details</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">No, thanks</button>
         </div>
     </script>
