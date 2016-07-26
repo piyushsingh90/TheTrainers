@@ -230,62 +230,24 @@
 					{ display: 'Home', href: '#/index', children: []},
 					{ display: 'About Us', href: '#/about', children: []},
 					{ display: 'Courses', href: '#', children: [
-						{ display: 'Fitness', href: '#', children: [
-															{ display: 'Yoga', href: '#/Yoga', children: []},
-															{ display: 'Exercise', href: '#/Exercise', children: []},
-															{ display: 'Fitness', href: '#/Fitness', children: []},
-															{ display: 'Aerobics', href: '#/Aerobics', children: []},
-															{ display: 'Zumba', href: '#/Zumba', children: []}
-						]},
+						{ display: 'Physical Activity', href: '#/PhysicalActivity', children: []},
 
-						{ display: 'Dance', href: '#', children: [
-															{ display: 'Classical', href: '#/ClassicalDance', children: []},
-															{ display: 'Western', href: '#/WesternDance', children: []},
-															{ display: 'Zumba', href: '#/Zumba', children: []},
-															{ display: 'Hip Hop', href: '#/HipHop', children: []},
-															{ display: 'Other Dance', href: '#/Dance', children: []}
-						]},
+						{ display: 'Dance', href: '#/Dance', children: []},
 
-						{ display: 'Music', href: '#/', children: [
-															{ display: 'Guitar', href: '#/Guitar', children: []},
-															{ display: 'Violin', href: '#/Violin', children: []},
-															{ display: 'Drums', href: '#/Drums', children: []},
-															{ display: 'Others', href: '#/Music', children: []}
-															
-						]},
+						{ display: 'Music', href: '#/Music', children: []},
 
-						{ display: 'Cooking', href: '#', children: [
-															{ display: 'Cooking', href: '#/Cooking', children: []},
-															{ display: 'Baking', href: '#/Baking', children: []},
-															{ display: 'Ice Cream Making', href: '#/IceCreamMaking', children: []}
-						]},
-
-						{ display: 'Cricket', href: '#/Cricket', children: []},
-
-						{ display: 'Painting', href: '#/Painting', children: []},
+						{ display: 'Cooking', href: '#/Cooking', children: []},
 
 						{ display: 'Photography', href: '#/Photography', children: []},
 
-						{ display: 'Art', href: '#', children: [
-															{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
-															{ display: 'Calligraphy', href: '#/Calligraphy', children: []},
-															{ display: 'Sculpture', href: '#/Sculpture', children: []},
-															{ display: 'Martial Arts', href: '#/MartialArt', children: []}
-						]},
+						{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
 
-						{ display: 'Foreign Language', href: '#', children: [
-															{ display: 'Spanish', href: '#/Spanish', children: []},
-															{ display: 'Japanese', href: '#/Japanese', children: []}
-															
-						]},
+						{ display: 'Foreign Language', href: '#/ForeignLanguage', children: []},
 
 						{ display: 'Others', href: '#', children: [
-															{ display: 'Athletics', href: '#/Athletics', children: []},
 															{ display: 'Fashion', href: '#/Fashion', children: []},
 															{ display: 'Computer', href: '#/Computer', children: []},
-															{ display: 'Skating', href: '#/Skating', children: []},
-															{ display: 'Jewellery Design', href: '#/JewelleryDesign', children: []},
-															{ display: 'Embroidery', href: '#/Embroidery', children: []}
+															{ display: 'Calligraphy', href: '#/Calligraphy', children: []}
 						]}
 
 						]},
