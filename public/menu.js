@@ -116,10 +116,6 @@
 					      id: currIndex++
 					    });
 					  slides.push({
-					      image: 'assets/images/slides/banner5.jpg',
-					      id: currIndex++
-					    });
-					  slides.push({
 					      image: 'assets/images/slides/banner6.jpg',
 					      id: currIndex++
 					    });
