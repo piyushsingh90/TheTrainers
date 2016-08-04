@@ -1,6 +1,7 @@
 var twilio = require('twilio');
 var httpMsgs = require('../core/httpMsgs');
 var db = require('../core/db');
+var email = require('./email.js');
 var ObjectId = require('mongodb').ObjectID;
 var client = new twilio.RestClient('ACb0a2f9b17f5cc4ed476c82fb96ff3d22', '333b7feac49ca6437a2092ead4b734cc');
 
@@ -21,7 +22,8 @@ exports.sendSMS = function(req,resp,body){
                         });
                     }
                 });
-                httpMsgs.send200(req,resp);
+                //httpMsgs.send200(req,resp);
+                email.sendSMSEmail(req,resp,body);
             }
             else {
                 db.dbs.collection('Logs').insert({err:err},function(err,result){

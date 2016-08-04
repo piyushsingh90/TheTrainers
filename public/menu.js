@@ -90,6 +90,23 @@
 			});
 
 			
+	    module.controller("Email",function($scope,$routeParams,$http,$httpParamSerializerJQLike){ 		
+				$scope.sendMail=function(mail){ 			
+				        console.log(mail); 			
+				         			
+				        $http.post('/email',mail) 			
+				      .success(function(data){ 			
+				              console.log("mail successfully sent to Test and Train"); 			
+				              console.log(data); 			
+				      }) 			
+				      .error(function(err){ 			
+				              console.log("In error"); 			
+				              console.log(err); 			
+				      }); 			
+					
+				}; 			
+	    })
+
 
 
 			module.controller("RouteController", function($scope,$routeParams,$http) {

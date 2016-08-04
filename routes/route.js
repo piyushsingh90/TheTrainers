@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var courses = require('../controllers/courses');
 var workshop = require('../controllers/workshop');
 var trainer = require('../controllers/trainer');
+var email = require('../controllers/email');
 var sms = require('../controllers/sms');
 var db = require('../core/db');
 var settings = require('../dbConfig');
@@ -74,7 +75,7 @@ exports.serve=function(app,express){
 	    });
 	});
 /***********************************/
-
+ //For SMS
 	app.post('/sms',function(req,resp){
 		sms.sendSMS(req,resp,req.body);
 	})
@@ -83,5 +84,13 @@ exports.serve=function(app,express){
 	app.get('/workshop',function(req,resp){
         workshop.getWorkshopDetails(req,resp);
     })
+
+
+	//For Email 			
+	app.post('/email',function(req,resp){ 			
+		console.log(req.body); 			
+	  email.sendEmail(req,resp,req.body); 			
+	}) 
+
 }
 
