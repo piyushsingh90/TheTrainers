@@ -16,6 +16,8 @@ exports.serve=function(app,express){
 	
 	app.get('/',function(req,resp){
 		console.log("in /"+ __dirname);
+		var date = new Date();
+    console.log(date);
 		resp.sendfile('home.html', {'root': __dirname +'/../public'});
 	})
 
@@ -82,12 +84,12 @@ exports.serve=function(app,express){
 
 //for workshop
 	app.get('/workshop',function(req,resp){
-        workshop.getWorkshopDetails(req,resp);
-    })
+		workshop.getWorkshopDetails(req,resp);
+  })
 
 
 	//For Email 			
-	app.post('/email',function(req,resp){ 			
+	app.post('/email',function(req,resp){ 		
 		console.log(req.body); 			
 	  email.sendEmail(req,resp,req.body); 			
 	}) 

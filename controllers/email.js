@@ -15,7 +15,6 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 
 exports.sendEmail = function(req,resp,body){
-
     var mailOptions =({
         to: 'testandtrain.kol@gmail.com', // list of receivers
         subject: "FeedBack", // Subject line
@@ -41,7 +40,7 @@ exports.sendSMSEmail = function(req,resp,body){
     var mailOptions =({
         to: 'testandtrain.kol@gmail.com', // list of receivers
         subject: "SMS", // Subject line
-        html: "Message has been successfully sent to: <b>"+body.mobile+"</b>  For trainer name: <b>"+body.Name+"</b> for service: <b>"+body.serviceType+"</b> Trainer Phone no: <b>"+body.phone+"</b> Trainer Area: <b>"+body.area+"</b> Trainer Fees: <b>"+body.Fees+"</b>" // html body
+        html: "Message has been successfully sent to: <b>"+body.mobile+"</b>  For trainer name: <b>"+body.Name+"</b> for service: <b>"+body.serviceType+"</b> Trainer Phone no: <b>"+body.phone+"</b> Trainer Area: <b>"+body.area+"</b> Trainer Fees: <b>"+body.Fees+"</b> Requested date: <b>"+body.reqDate+"</b>" // html body
     });
 
     smtpTransport.sendMail(mailOptions, function(err, response){
