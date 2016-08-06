@@ -28,6 +28,18 @@
 			                    templateUrl: 'videosView.html',
 			                    controller: 'VideoController'
 			                }).
+			                when('/videos/:param1/:param2/pics', {
+			                    templateUrl: 'onlyPicsView.html',
+			                    controller: 'VideoController'
+			                }).
+			                when('/videos/:param1/:param2/vids', {
+			                    templateUrl: 'onlyVideosView.html',
+			                    controller: 'VideoController'
+			                }).
+			                when('/videos/:param1/:param2/call', {
+			                    templateUrl: 'onlyCallView.html',
+			                    controller: 'VideoController'
+			                }).
 			                when('/Workshop', {
 			                    templateUrl: 'workshopView.html',
 			                    controller: 'WorkShopController'
@@ -143,6 +155,7 @@
 					$scope.param1 = $routeParams.param1;
 					$scope.param2 = $routeParams.param2;
 			});
+
 
 			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
