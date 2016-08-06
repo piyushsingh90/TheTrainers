@@ -7,6 +7,7 @@ var email = require('../controllers/email');
 var sms = require('../controllers/sms');
 var db = require('../core/db');
 var settings = require('../dbConfig');
+var fs = require('fs');
 
 
 exports.serve=function(app,express){
@@ -93,6 +94,15 @@ exports.serve=function(app,express){
 		console.log(req.body); 			
 	  email.sendEmail(req,resp,req.body); 			
 	}) 
+
+
+	//For Getting all images in a folder
+	app.get('/images/:id', function (req, res, next){
+    fs.readdir('public/assets/images/pics/'+req.params.id+'/', function (err, files){
+        if (err) return next (err);
+        res.send(files);
+    });
+});
 
 }
 

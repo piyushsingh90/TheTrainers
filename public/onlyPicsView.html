@@ -22,11 +22,21 @@
       
     </div>
     <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade in active">
-    	<div class="row">
-    		<div class="col-md-12">
-    			<p>More Pics Coming Soon...........</p>
-    		</div>
-    	</div>
+    	<div class="row top-margin">
+		<div class="col-md-12">
+
+				<div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+					<article class="col-sm-3 isotopeItem" ng-repeat="pic in allPics">
+						<div class="portfolio-item" >
+						
+						<img src="assets/images/pics/{{trainerVideoData._id}}/{{pic}}" class="img-rounded" />
+								
+						</div>
+					</article>				
+				</div>
+		</div>
+	</div>
     </div>
     <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade">
       

@@ -30,7 +30,7 @@
 			                }).
 			                when('/videos/:param1/:param2/pics', {
 			                    templateUrl: 'onlyPicsView.html',
-			                    controller: 'VideoController'
+			                    controller: 'OnlyPicsController'
 			                }).
 			                when('/videos/:param1/:param2/vids', {
 			                    templateUrl: 'onlyVideosView.html',
@@ -216,6 +216,42 @@
 
 
 				  };
+
+		});
+
+		module.controller("OnlyPicsController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
+					$scope.subCategory = $routeParams.param1;
+					$scope.id = $routeParams.param2;
+					
+					$scope.trainerVideoData = [];
+					$scope.allPics = [];
+
+					if($scope.subCategory != undefined && $scope.id != undefined){
+						
+						$http.get("/trainer/"+ $scope.subCategory+"/"+$scope.id)
+						    .then(function(response) {
+						        $scope.trainerVideoData = response.data[0];
+
+						        $scope.trainerVideoData.hasVideo = (response.data[0].videos != undefined);
+
+						        $scope.subHeaderText = $scope.trainerVideoData.serviceType.replace(/[a-z][A-Z]/g, function(str, offset) {
+								    return str[0] + ' ' + str[1];
+								});		
+						    }, function(response) {
+						        console.log('error '+ response);
+						        $scope.trainerVideoData = "Something went wrong";
+						    });
+
+						$http.get("/images/"+$scope.id)
+						    .then(function(response) {
+						    	console.log(response.data);
+						        $scope.allPics = response.data;
+						   		
+						    }, function(response) {
+						        console.log('error '+ response);
+						        $scope.allPics = "Something went wrong";
+						    });
+					}
 
 		});
 
