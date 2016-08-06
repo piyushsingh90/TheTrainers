@@ -304,6 +304,8 @@
 
 						{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
 
+						{ display: 'Painting', href: '#/Painting', children: []},
+
 						{ display: 'Foreign Language', href: '#/ForeignLanguage', children: []},
 
 						{ display: 'Others', href: '#', children: [
