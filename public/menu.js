@@ -246,6 +246,8 @@
 						    .then(function(response) {
 						    	console.log(response.data);
 						        $scope.allPics = response.data;
+
+						        $scope.hasPics = (response.data != undefined);
 						   		
 						    }, function(response) {
 						        console.log('error '+ response);

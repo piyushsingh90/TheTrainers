@@ -11,7 +11,7 @@
 	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
 
 	<ul class="nav nav-tabs">
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
+	    <li ><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
 	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics">Pictures</a></li>
 	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids">Videos</a></li>
 	    <li class="active"><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call">Call Me</a></li>
@@ -30,7 +30,8 @@
     <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" class="tab-pane fade in active">
     	<div class="row top-margin">
 			<div class="col-md-10">
-	    		<button type="button" class="btn btn-default" ng-click="open()">Contact {{trainerVideoData.Name}} </button>
+	    		<button type="button" class="btn btn-default" ng-click="open()"> <i class="fa fa-phone" aria-hidden="true" style="margin-right: 6px"></i>
+Contact {{trainerVideoData.Name}} </button>
 			</div>
 
 		</div>

@@ -22,7 +22,7 @@
       
     </div>
     <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade in active">
-    	<div class="row top-margin">
+    	<div class="row">
 		<div class="col-md-12">
 
 				<div class="portfolio-items isotopeWrapper clearfix" id="3">
@@ -33,9 +33,19 @@
 						<img src="assets/images/pics/{{trainerVideoData._id}}/{{pic}}" class="img-rounded" />
 								
 						</div>
-					</article>				
+					</article>			
 				</div>
 		</div>
+
+
+				<div class="col-md-12" ng-if="!hasPics">
+					<div class="col-sm-6" class="alert alert-danger text-lg">
+						<h3>
+							<i class="fa fa-frown-o" aria-hidden="true" style="margin-right: 6px"></i>
+							Oops! No pictures found.
+						</h3>
+					</div>
+				</div>
 	</div>
     </div>
     <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade">
