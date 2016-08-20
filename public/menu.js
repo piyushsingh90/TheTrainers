@@ -116,7 +116,11 @@
 				         			
 				        $http.post('/email',mail) 			
 				      .success(function(data){ 			
-				              $('#success').html('<i class="fa fa-check" aria-hidden="true"></i>Message sent successfully');		
+				              $('#success').html('<i class="fa fa-check" aria-hidden="true"></i>Message sent successfully');
+				              $('#name').val('');	
+				              $('#email').val('');
+				              $('#message').val('');
+				              $('#submit').attr('disabled', true);
 				      }) 			
 				      .error(function(err){ 			 			
 				              console.log(err); 
