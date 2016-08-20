@@ -91,9 +91,16 @@
 
 			module.controller("WorkShopController", function($scope,$routeParams,$http) {
 					$scope.workshops = [];
+
+					$scope.hasWorkshops = false;
+
                     $http.get("/workshop")
                         .then(function(response) {
                         $scope.workshops = response.data;
+                        if($scope.workshops.length > 0){
+                        	$scope.hasWorkshops = true;
+                        }
+
                     }, function(response) {
                         console.log('error '+ response);
                         $scope.workshop = "Something went wrong";
@@ -103,17 +110,17 @@
 
 			
 	    module.controller("Email",function($scope,$routeParams,$http,$httpParamSerializerJQLike){ 		
-				$scope.sendMail=function(mail){ 			
-				        console.log(mail); 			
+				$scope.sendMail=function(mail){
+
+						$('#success').html('<i class="fa fa-spinner" aria-hidden="true"></i>'); 		
 				         			
 				        $http.post('/email',mail) 			
 				      .success(function(data){ 			
-				              console.log("mail successfully sent to Test and Train"); 			
-				              console.log(data); 			
+				              $('#success').html('<i class="fa fa-check" aria-hidden="true"></i>Message sent successfully');		
 				      }) 			
-				      .error(function(err){ 			
-				              console.log("In error"); 			
-				              console.log(err); 			
+				      .error(function(err){ 			 			
+				              console.log(err); 
+				              $('#success').html('<i class="fa fa-times" aria-hidden="true"></i>Oops,something went wrong');					
 				      }); 			
 					
 				}; 			
@@ -130,10 +137,6 @@
 
 					  slides.push({
 					      image: 'assets/images/slides/banner.jpg',
-					      id: currIndex++
-					    });
-					  slides.push({
-					      image: 'assets/images/slides/banner2.jpg',
 					      id: currIndex++
 					    });
 					  slides.push({

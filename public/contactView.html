@@ -19,7 +19,7 @@
 						</p>
 						
 					  
-		<form name="sentMessage" id="contactForm"  novalidate> 
+		<form name="sentMessage" id="contactForm"> 
 		<div class="control-group">
 		<div class="controls">
 		<input type="text" class="form-control" ng-model="mail.Name"
@@ -46,7 +46,7 @@
 		</div>
 		</div> 		 
 		<div id="success"> </div> <!-- For success/fail messages -->
-		<button type="submit" ng-click="sendMail(mail)"  class="btn btn-primary pull-right">Send</button><br />
+		<button type="submit" ng-click="sendMail(mail)"  class="btn btn-primary pull-right" ng-disabled="sentMessage.$invalid">Send</button><br />
 		</form>
 					</div>
 					<div class="col-md-4">
