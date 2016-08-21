@@ -40,6 +40,10 @@
 			                    templateUrl: 'onlyCallView.html',
 			                    controller: 'VideoController'
 			                }).
+			                when('/videos/:param1/:param2/rating', {
+			                    templateUrl: 'onlyRatingView.html',
+			                    controller: 'VideoController'
+			                }).
 			                when('/Workshop', {
 			                    templateUrl: 'workshopView.html',
 			                    controller: 'WorkShopController'
@@ -169,6 +173,8 @@
 					$scope.id = $routeParams.param2;
 					
 					$scope.trainerVideoData = [];
+					$scope.totalRate = 0;
+				  	$scope.counter = 0;
 
 					if($scope.subCategory != undefined && $scope.id != undefined){
 						
@@ -177,6 +183,15 @@
 						        $scope.trainerVideoData = response.data[0];
 
 						        $scope.trainerVideoData.hasVideo = (response.data[0].videos != undefined);
+
+						        if($scope.trainerVideoData.totalRate !== undefined){
+						        	$scope.totalRate = $scope.trainerVideoData.totalRate;
+						        }
+
+						        if($scope.trainerVideoData.counter !== undefined){
+				  					$scope.counter = $scope.trainerVideoData.counter;
+						        }
+						        
 
 						        $scope.subHeaderText = $scope.trainerVideoData.serviceType.replace(/[a-z][A-Z]/g, function(str, offset) {
 								    return str[0] + ' ' + str[1];
@@ -223,6 +238,30 @@
 
 
 				  };
+
+
+				  //$scope.totalRate = $scope.trainerVideoData.totalRate;
+				  $scope.rate = 0;
+				  $scope.max = 10;
+				  $scope.isReadonly = false;
+				  //$scope.counter = $scope.trainerVideoData.counter;
+
+				  $scope.hoveringOver = function(value) {
+				    $scope.overStar = value;
+				    $scope.percent = 100 * (value / $scope.max);
+				  };
+
+			      $scope.$watch('rate', function(newValue, oldValue) {
+				    if(newValue!==oldValue){
+				        $scope.totalRate = Math.round((($scope.totalRate * $scope.counter)  + $scope.rate)/( $scope.counter +1 ));
+				        $scope.counter = $scope.counter + 1;
+
+				        $scope.trainerVideoData.totalRate = $scope.totalRate;
+				        $scope.trainerVideoData.counter = $scope.counter;
+
+				        $http.put("/trainer/"+ $scope.subCategory+"/"+$scope.id, $scope.trainerVideoData );
+				  	}
+				  });
 
 		});
 

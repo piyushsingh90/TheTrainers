@@ -44,9 +44,8 @@ exports.getTrainer=function(req,resp,id,category){
 	})
 }
 
-//TODO: fix this. giving error in reAL time
-/*exports.updateTrainer=function(req,resp,id,category,updatedData){
-	db.dbs.collection(category).updateOne({"_id": new ObjectId(id)},{$set:{updatedData}}, function(err, data) {
+exports.updateTrainer=function(req,resp,id,category,counter, totalRate){
+	db.dbs.collection(category).update({"_id": new ObjectId(id)},{$set:{counter: counter, totalRate : totalRate}}, function(err, data) {
 		if(!err){
 			httpMsgs.send200(req,resp);
 			console.log(data);
@@ -55,5 +54,5 @@ exports.getTrainer=function(req,resp,id,category){
 			httpMsgs.show500(req,resp,err);	
 		}
   });
-}*/
+}
 

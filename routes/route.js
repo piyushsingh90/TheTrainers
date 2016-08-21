@@ -51,8 +51,8 @@ exports.serve=function(app,express){
 
 	app.put('/trainer/:category/:id',function(req,resp){
 		var id = req.params.id;
-		var category = req.params.id;
-		trainer.updateTrainer(req,resp,id,category,req.body);
+		var category = req.params.category;
+		trainer.updateTrainer(req,resp,id,category,req.body.counter, req.body.totalRate);
 	})
 
 	app.get('/trainer/:category/:id',function(req,resp){
