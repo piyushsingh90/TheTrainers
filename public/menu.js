@@ -147,18 +147,6 @@
 					      image: 'assets/images/slides/banner.jpg',
 					      id: currIndex++
 					    });
-					  slides.push({
-					      image: 'assets/images/slides/banner3.jpg',
-					      id: currIndex++
-					    });
-					  slides.push({
-					      image: 'assets/images/slides/banner4.jpg',
-					      id: currIndex++
-					    });
-					  slides.push({
-					      image: 'assets/images/slides/banner6.jpg',
-					      id: currIndex++
-					    });
 
 			});
 
