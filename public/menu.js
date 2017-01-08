@@ -1,5 +1,5 @@
 (function(){
-			var module = angular.module('myApp', ['bootstrapSubmenu','ngRoute','ngSanitize','ngAnimate','ui.bootstrap']);
+			var module = angular.module('myApp', ['ngRoute','ngSanitize','ngAnimate','ui.bootstrap']);
 
 			module.config(['$routeProvider',
 			        function($routeProvider) {
@@ -44,11 +44,11 @@
 			                    templateUrl: 'onlyRatingView.html',
 			                    controller: 'VideoController'
 			                }).
-			                when('/Workshop', {
+			                when('/workshop', {
 			                    templateUrl: 'workshopView.html',
 			                    controller: 'WorkShopController'
 			                }).
-			                when('/:param', {
+			                when('/courses/:param', {
 			                    templateUrl: 'coursesView.html',
 			                    controller: 'TrainerController'
 			                }).
@@ -59,39 +59,18 @@
 			                otherwise({
 			                    redirectTo: '/'
 			                });
-			        }]);
+			}]);
 
 			module.config(function($sceProvider) {
 			  $sceProvider.enabled(false);
 			});
 
-			module.run(function ($rootScope, $location,$route, $timeout) {
 
-			    $rootScope.config = {};
-			    $rootScope.config.app_url = $location.url();
-			    $rootScope.config.app_path = $location.path();
-			    $rootScope.layout = {};
-			    $rootScope.layout.loading = false;
-
-			    $rootScope.$on('$routeChangeStart', function () {
-			        //show loading gif
-			        $timeout(function(){
-			          $rootScope.layout.loading = true;          
-			        });
-			    });
-			    $rootScope.$on('$routeChangeSuccess', function () {
-			        //hide loading gif
-			        $timeout(function(){
-			          $rootScope.layout.loading = false;
-			        }, 200);
-			    });
-			    $rootScope.$on('$routeChangeError', function () {
-
-			        //hide loading gif
-			        $rootScope.layout.loading = false;
-
-			    });
+			module.controller("RouteController", function($scope,$routeParams,$http) {
+					//for index page
 			});
+
+
 
 			module.controller("WorkShopController", function($scope,$routeParams,$http) {
 					$scope.workshops = [];
@@ -113,7 +92,7 @@
 			});
 
 			
-	    module.controller("Email",function($scope,$routeParams,$http,$httpParamSerializerJQLike){ 		
+			module.controller("Email",function($scope,$routeParams,$http,$httpParamSerializerJQLike){ 		
 				$scope.sendMail=function(mail){
 
 						$('#success').html('<i class="fa fa-spinner" aria-hidden="true"></i>'); 		
@@ -132,31 +111,31 @@
 				      }); 			
 					
 				}; 			
-	    })
+	    	});
 
 
+	    	module.controller("TrainerController", function($scope,$routeParams,$http) {
+					$scope.param = $routeParams.param;
+					var parameter = $scope.param;
+					$scope.trainerData = [];
 
-			module.controller("RouteController", function($scope,$routeParams,$http) {
-					$scope.myInterval = 3000;
-					  $scope.noWrapSlides = false;
-					  $scope.active = 0;
-					  var slides = $scope.slides = [];
-					  var currIndex = 0;
+					$scope.headerText = parameter.replace(/[a-z][A-Z]/g, function(str, offset) {
+					    return str[0] + ' ' + str[1];
+					});
 
-					  slides.push({
-					      image: 'assets/images/slides/banner.jpg',
-					      id: currIndex++
-					    });
-
+					if(parameter !== undefined){
+						$http.get("/trainer/"+ parameter)
+						    .then(function(response) {
+						    		$scope.trainerData = response.data;
+						    }, function(response) {
+						        $scope.trainerData = "Something went wrong";
+						    });
+					}
 			});
 
-			module.controller("FilterController", function($scope,$routeParams,$http) {
-					$scope.param1 = $routeParams.param1;
-					$scope.param2 = $routeParams.param2;
-			});
+	    
 
-
-			module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
+	    	module.controller("VideoController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
 					$scope.id = $routeParams.param2;
 					
@@ -251,9 +230,22 @@
 				  	}
 				  });
 
-		});
+			});
+			
 
-		module.controller("OnlyPicsController", function($scope,$routeParams,$http,$uibModal, $log,$httpParamSerializerJQLike) {
+			module.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, toMobile) {
+				
+			  $scope.ok = function (trainerVideoData) {
+			  	$uibModalInstance.close($scope.toMobile);
+			  };
+
+			  $scope.cancel = function () {
+			    $uibModalInstance.dismiss('cancel');
+			  };
+			});
+			
+
+			module.controller("OnlyPicsController", function($scope,$routeParams,$http, $log,$httpParamSerializerJQLike) {
 					$scope.subCategory = $routeParams.param1;
 					$scope.id = $routeParams.param2;
 					
@@ -292,67 +284,11 @@
 		});
 
 
-			module.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, toMobile) {
-				
-			  $scope.ok = function (trainerVideoData) {
-			  	$uibModalInstance.close($scope.toMobile);
-			  };
-
-			  $scope.cancel = function () {
-			    $uibModalInstance.dismiss('cancel');
-			  };
-			});
-
-			module.controller("TrainerController", function($scope,$routeParams,$http) {
-					$scope.param = $routeParams.param;
-					var parameter = $scope.param;
-					$scope.trainerData = [];
-
-					$scope.headerText = parameter.replace(/[a-z][A-Z]/g, function(str, offset) {
-					    return str[0] + ' ' + str[1];
-					});
-
-					if(parameter !== undefined){
-						$http.get("/trainer/"+ parameter)
-						    .then(function(response) {
-						    		$scope.trainerData = response.data;
-						    }, function(response) {
-						        $scope.trainerData = "Something went wrong";
-						    });
-					}
-			});
 
 
-			module.controller('menuController', function($scope){
-					$scope.menuItems = [
-					{ display: 'Home', href: '#/index', children: []},
-					{ display: 'About Us', href: '#/about', children: []},
-					{ display: 'Courses', href: '#', children: [
-						{ display: 'Physical Activity', href: '#/PhysicalActivity', children: []},
+			
 
-						{ display: 'Dance', href: '#/Dance', children: []},
+			
 
-						{ display: 'Music', href: '#/Music', children: []},
-
-						{ display: 'Cooking', href: '#/Cooking', children: []},
-
-						{ display: 'Photography', href: '#/Photography', children: []},
-
-						{ display: 'Art & Craft', href: '#/ArtAndCraft', children: []},
-
-						{ display: 'Painting', href: '#/Painting', children: []},
-
-						{ display: 'Foreign Language', href: '#/ForeignLanguage', children: []},
-
-						{ display: 'Others', href: '#', children: [
-															{ display: 'Fashion', href: '#/Fashion', children: []},
-															{ display: 'Computer', href: '#/Computer', children: []},
-															{ display: 'Calligraphy', href: '#/Calligraphy', children: []}
-						]}
-
-						]},
-					{ display: 'Workshops', href: '#/Workshop', children: []},
-					{ display: 'Contact', href: '#/contact', children: []}
-					];
-				});
-		})();
+			
+})();

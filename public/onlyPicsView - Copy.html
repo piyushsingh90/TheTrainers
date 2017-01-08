@@ -1,0 +1,62 @@
+<div ng-controller="VideoController" style="min-height: 600px;">
+
+	<header id="head" class="secondary">
+            <div class="container">
+                    <h1>{{trainerVideoData.Name}}</h1>
+                    {{subHeaderText}}
+            </div>
+    </header>
+
+    
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+	<ul class="nav nav-tabs">
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
+	    <li class="active"><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics">Pictures</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids">Videos</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call">Call Me</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating">Rating</a></li>
+  	</ul>
+
+  <div class="tab-content">
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" class="tab-pane fade">
+      
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade in active">
+    	<div class="row">
+		<div class="col-md-12">
+
+				<div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+					<article class="col-sm-3 isotopeItem" ng-repeat="pic in allPics">
+						<div class="portfolio-item" >
+						
+						<img src="assets/images/pics/{{trainerVideoData._id}}/{{pic}}" class="img-rounded" />
+								
+						</div>
+					</article>			
+				</div>
+		</div>
+
+
+				<div class="col-md-12" ng-if="!hasPics">
+					<div class="col-sm-6" class="alert alert-danger text-lg">
+						<h3>
+							<i class="fa fa-frown-o" aria-hidden="true" style="margin-right: 6px"></i>
+							Oops! No pictures found.
+						</h3>
+					</div>
+				</div>
+	</div>
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade">
+      
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" class="tab-pane fade">
+
+    </div>
+  </div>
+</div>
+
+
+</div>

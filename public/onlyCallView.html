@@ -1,51 +1,100 @@
-<div ng-controller="VideoController" style="min-height: 600px;">
+<div ng-controller="VideoController" class="col-lg-12">
 
-	<header id="head" class="secondary">
-            <div class="container">
-                    <h1>{{trainerVideoData.Name}}</h1>
-                    {{subHeaderText}}
+	<section id="content" class="shortcode-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <h2>{{subHeaderText}} > {{trainerVideoData.Name}}</h2> 
+                    <div class="tab-wrap">
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" data-toggle="tab" class="analistic-01">Know Me</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" data-toggle="tab" class="analistic-02">Pictures</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" data-toggle="tab" class="tehnical">Videos</a></li>
+                                    <li class="active"><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" data-toggle="tab" class="tehnical">Call Me</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating" data-toggle="tab" class="tehnical">Rating</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab1">
+
+                                    </div>
+
+                                     <div class="tab-pane" id="tab2">
+
+                                        
+                                     </div>
+
+                                     <div class="tab-pane" id="tab3">
+
+                               
+                                     </div>
+                                     
+                                     <div class="tab-pane  active in" id="tab4">
+                                        	<div class="row top-margin">
+												<div class="col-md-10">
+										    		<button type="button" class="btn btn-default" ng-click="open()"> <i class="fa fa-phone" aria-hidden="true" style="margin-right: 6px"></i>Contact {{trainerVideoData.Name}} </button>
+												</div>
+
+											</div>
+											<div class="row top-margin">
+												<div class="col-md-10">
+										    		<p>If you couldn't connect with the Trainer, please feel free to reach us on <span class="label label-primary">+91 89 61 29 29 79</span> or <span class="label label-primary">+91 84 43 96 02 52</span> & we will get back to you ASAP !!</p>
+												</div>
+											</div>
+                                     </div>
+
+                                     <div class="tab-pane" id="tab5">
+                                        
+                                     </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div><!--/.col-sm-6-->
             </div>
-    </header>
-
-    
-	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
-
-	<ul class="nav nav-tabs">
-	    <li ><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics">Pictures</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids">Videos</a></li>
-	    <li class="active"><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call">Call Me</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating">Rating</a></li>
-  	</ul>
-
-  <div class="tab-content">
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" class="tab-pane fade">
-      
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade">
-
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade">
-      
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" class="tab-pane fade in active">
-    	<div class="row top-margin">
-			<div class="col-md-10">
-	    		<button type="button" class="btn btn-default" ng-click="open()"> <i class="fa fa-phone" aria-hidden="true" style="margin-right: 6px"></i>Contact {{trainerVideoData.Name}} </button>
-			</div>
-
-		</div>
-		<div class="row top-margin">
-			<div class="col-md-10">
-	    		<p>If you couldn't connect with the Trainer, please feel free to reach us on <span class="label label-primary">+91 89 61 29 29 79</span> or <span class="label label-primary">+91 84 43 96 02 52</span> & we will get back to you ASAP !!</p>
-			</div>
-		</div>
-    </div>
-  </div>
-</div>
+        </div>
+    </section>
 
 
-</div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">We will send the contact details to your mobile</h3>
+        </div>
+        <div class="modal-body">
+
+            <form name = "numberForm">
+                <div>
+                <input type="text"
+                       placeholder = "Enter your phonenumber"
+                       class = "formcontroll"
+                       name = "numbers"
+                       ng-minlength = "10"
+                       ng-maxlength = "10"
+                       ng-model="toMobile" required/>
+                       <span class="help-block" ng-show = "numberForm.numbers.$error.required || numberForm.numbers.$error.number">
+                                   Valid phone number is required
+                        </span>
+                        <span class="help-block" ng-show = "((numberForm.numbers.$error.minlength || numberForm.numbers.$error.maxlength) && numberForm.numbers.$dirty)">
+                                    Phone number should be 10 digits
+                   </div>
+               </form>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()" ng-disabled="numberForm.$invalid">Yes, send me the details</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">No, thanks</button>
+        </div>
+    </script>	
+	
+
+
+
+
 
 
 

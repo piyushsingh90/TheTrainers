@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <title>Test & Train | Best In Kolkata</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <meta name="description" content="Smart step for the smart generation!
+    Sit at home and decide what you want to learn because the best of experienced trainers are just a click away! We bring you a treasure house of trainers from all fields to help you indulge into co-curricular activities. Choose your trainers from a gallery of options and get the best deals by filtering according to your terms and conditions. The trainer's profiles are equipped with evidence of their work. Get to know your trainer better from the photos and videos that we upload.
+
+    You can get a hint of Test and Train by attending our workshops which are diligently held every month with special offers for every season. We are also open to organising workshops according to your taste and preferences. Get ready to become an all rounder because THE BEST TIME TO LEARN IS NOW. ">
+    <meta name="author" content="Test and Train">
+    <meta name="keywords" content="Test and train kolkata, cooking workshop, best training in kolkata, best, free, training, online, cheap, cooking, dancing, workshop, cricket, training, painiting, atr, craft, drawing, singing, music, fitness, yoga, fitness, skating everything">
+    <script src="assets/js/angular-1.4.7.js"></script>
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/bootstrap-3.3.5.js"></script>
+    <script src="dist/ng-bootstrap-submenu.min.js"></script>
+    <script src="assets/js/angular-route-1.3.0.js"></script>
+    <script src="assets/js/angular-sanitize-1.4.7.js"></script>
+    <script src="assets/js/angular-animate-1.4.7.js"></script>
+    <script src="assets/js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap-theme-3.3.5.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/ng-bootstrap-submenu.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 100%;
+        margin: auto;
+    }
+    .bs-callout {
+        padding: 20px;
+        border: 1px solid #eee;
+        border-left-width: 5px;
+        border-radius: 3px;
+    }
+    .bs-callout h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .bs-callout > span {
+        background-color: #7A2E89;
+    }
+    .bs-callout-primary {
+        border-left-color: #7A2E89;
+    }
+    .bs-callout-primary h4 {
+        color: #7A2E89;
+    }
+    .pic-subheader{
+        font-size: 10px !important;
+        border-top: 0px !important;
+        display: inline-block;
+    }
+    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-81255359-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <meta name="google-site-verification" content="zWedHd65mnaXrhHxRp9fmSKrcw3OdfNzBzr50i-AEzo" />
+  </head>
+
+  <body ng-app="myApp">
+    <div ng-controller="menuController">
+      <div class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Button for smallest screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          
+              <img src="assets/images/logo.jpg" alt="Logo">
+          </div>
+          <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right mainNav">
+            <bootstrap-submenu ng-repeat="item in menuItems" menu-item="item">
+            </bootstrap-submenu>
+          </ul>
+        </div>
+        </div>
+      </div>
+    
+
+    <div class="container" ng-view>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+        
+    <div class="footer2" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 panel">
+            <div class="fb-like" data-href="https://www.facebook.com/testandtrainonline/" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true">
+            </div>
+          </div>
+          <div class="col-md-3 panel">
+            <a href="https://twitter.com/TestandTrain" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @TestandTrain</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <div class="col-md-3 panel">
+            <style>
+            .ig-b- { display: inline-block; }
+            .ig-b- img { visibility: hidden; }
+            .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+            .ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+            .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+            <a href="https://www.instagram.com/testandtrain/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+          </div>
+          <div class="col-md-3 panel">
+            <div class="panel-body">
+              <p class="text-right">
+                v31, &copy; 2016.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

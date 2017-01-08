@@ -243,7 +243,7 @@ margin: 0 auto;
 .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus,
 .navbar-inverse .navbar-nav > .active > a{
 	background: #7A2E89;
-	color: #fff !important;
+	color: #000 !important;
     border-radius: 0px;
 } 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > .open ul > a {

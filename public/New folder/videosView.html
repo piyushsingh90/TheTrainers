@@ -1,0 +1,103 @@
+<div ng-controller="VideoController" style="min-height: 600px;">
+
+	<header id="head" class="secondary">
+            <div class="container">
+                    <h1>{{trainerVideoData.Name}}</h1>
+                    {{subHeaderText}}
+            </div>
+    </header>
+
+    
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+	<ul class="nav nav-tabs">
+	    <li class="active"><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics">Pictures</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids">Videos</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call">Call Me</a></li>
+	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating">Rating</a></li>
+  	</ul>
+
+  <div class="tab-content">
+    <div id="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" class="tab-pane fade in active">
+     <div class="row"> 
+      <div class="col-md-12">
+			<table class="table table-striped">
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-star" aria-hidden="true" style="margin-right: 10px"></span>
+						    <span>Experience:</span>
+						</i>
+					</td>
+					<td>{{trainerVideoData.experience}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-inr" aria-hidden="true" style="margin-right: 14px"></span>
+						    <span>Fees:</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.Fees}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-map-marker" aria-hidden="true" style="margin-right: 14px"></span>
+						    <span>Area:</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.area}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-calendar-check-o" aria-hidden="true" style="margin-right: 8px"></span>
+						    <span>Classes Per Week:</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.noOfClasses}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-language" aria-hidden="true" style="margin-right: 8px"></span>
+						    <span>Languages Known:</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.languages}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-location-arrow" aria-hidden="true" style="margin-right: 8px"></span>
+						    <span>Training At Student/Trainer Place ?</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.place}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-users" aria-hidden="true" style="margin-right: 6px"></span>
+						    <span>Private/Group Training ?</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.privateOrGroup}}</td>
+		  		</tr>
+		  		<tr>
+		  			<td><i>
+						    <span class="fa fa-flag-checkered" aria-hidden="true" style="margin-right: 6px"></span>
+						    <span>Open to Workshops ?</span>
+						</i>
+					</td>
+		  			<td>{{trainerVideoData.openToWorkshops}}</td>
+		  		</tr>
+			</table>
+		</div>
+		</div>
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade">
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade">
+    </div>
+    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" class="tab-pane fade">
+    </div>
+  </div>
+</div>
+
+</div>

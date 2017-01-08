@@ -1,106 +1,108 @@
-<div ng-controller="RouteController">
+<div ng-controller="RouteController" class="col-lg-12">
 
-        <header id="head">
-            <div style="height: 300 px">
-              <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                  <img ng-src="{{slide.image}}" style="margin:auto;">
-                  <div class="carousel-caption">
-                    <p>{{slide.text}}</p>
-                  </div>
-                </uib-slide>
-              </uib-carousel>
+  <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active" style="background-image: url(images/slider/banner.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1 ourText">Look no further !!!</h1>
+                                    <h2 class="animation animated-item-2 ourText">Your search for your perfect trainer ends here....</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#about">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img2.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </section><!--/#main-slider-->
+
+    <section id="feature" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>Features</h2>
+                <p class="lead">The time to learn is NOW! Let Test & Train help you learn all that you have ever dreamt of. We give you trainers and organize workshops too.</p>
             </div>
-        </header>
 
-
-      <div class="row top-margin">
-          <div class="col-md-3">
-            <div class="grey-box-icon">
-              <div class="icon-box-top grey-box-icon-pos fa fa-youtube-play fa-5x">
-              </div><!--icon box top -->
-              <h4>Online Videos</h4>
-              <p>You can catch a glimpse of your trainers in action ! Check out the demo training videos available on our portal.</p>
-            </div><!--grey box -->
-          </div><!--/span3-->
-
-          <div class="col-md-3">
-            <div class="grey-box-icon">
-              <div class="icon-box-top grey-box-icon-pos fa fa-user-secret fa-5x">
-              </div><!--icon box top -->
-              <h4>Pro Trainers</h4>
-              <p>We have professional trainers, and you can avail services of a personal trainer too. So there is no reason stopping you now !!</p>
-            </div><!--grey box -->
-          </div><!--/span3-->
-
-          <div class="col-md-3">
-            <div class="grey-box-icon">
-              <div class="icon-box-top grey-box-icon-pos fa fa-map-marker fa-5x">
-              </div><!--icon box top -->
-              <h4>Expanding Footprints</h4>
-              <p>We provide services accross Kolkata and nearby suburbs.We conduct workshops too, So wherever you are, keep learning.</p>
-            </div><!--grey box -->
-          </div><!--/span3-->
-
-          <div class="col-md-3">
-            <div class="grey-box-icon">
-              <div class="icon-box-top grey-box-icon-pos fa fa-inr fa-5x">
-              </div><!--icon box top -->
-              <h4>Reasonable rates</h4>
-              <p>We have flexible & affordable - Daily & Monthly packages. And there's more to it, you can even customize your package.</p>
-            </div><!--grey box -->
-          </div><!--/span3-->
-      </div>
-
-
-      <div class="row top-margin">
-          <h2><span>Latest Trainings</span></h2>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <iframe width="350" height="200" src="https://www.youtube.com/embed/z8lcbt7d4Nw"></iframe>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><h5>Dancing</h5></p>
-                                            <p>Learn to set the dance floor on the fire, so put on your dancing shoes fast.</p>
-                                        </div> 
-                                </div>
-                            </div>
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-youtube-play"></i>
+                            <h2>Online Videos</h2>
+                            <h3 class="ourFeatures">You can catch a glimpse of your trainers in action ! Check out the demo training videos available on our portal.</h3>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <iframe width="350" height="200" src="http://www.youtube.com/embed/x55-V5LqobE"></iframe>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><h5>Exercise</h5></p>
-                                            <p>Everybody wants better abs! This class has it all what it takes for a 6 pack, so be ready to work!.</p>
-                                        </div> 
-                                </div>
-                            </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-user"></i>
+                            <h2>Pro Trainers</h2>
+                            <h3 class="ourFeatures">We have professional trainers, and you can avail services of a personal trainer too. So there is no reason stopping you now !!</h3>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <iframe width="350" height="200" src="http://www.youtube.com/embed/G_hqcKdDvro"></iframe>
-                            <div class="caption maxheight2">
-                           <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><h5>Yoga</h5></p>
-                                            <p>When you find peace within yourself, you become the kind of person who can live at peace with others.</p>
-                                        </div> 
-                                </div>
-                            </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-map-marker"></i>
+                            <h2>Expanding Footprints</h2>
+                            <h3 class="ourFeatures">We provide services accross Kolkata and nearby suburbs.We conduct workshops too, So wherever you are, keep learning.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.services-->
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+    
+    
+    
+    <section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need a custom quote?</h2>
+                            <p>Please get in touch with us, and we will be happy to help you get trained.
+                            <a class="btn-slide animation animated-item-3" href="#">Contact Us</a>
+                            </p>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
+        
+
+
+      
+
+
 </div>

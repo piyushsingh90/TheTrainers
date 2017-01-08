@@ -1,54 +1,70 @@
-<div ng-controller="VideoController" style="min-height: 600px;">
+<div ng-controller="VideoController" class="col-lg-12">
 
-	<header id="head" class="secondary">
-            <div class="container">
-                    <h1>{{trainerVideoData.Name}}</h1>
-                    {{subHeaderText}}
+<section id="content" class="shortcode-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <h2>{{subHeaderText}} > {{trainerVideoData.Name}}</h2> 
+                    <div class="tab-wrap">
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" data-toggle="tab" class="analistic-01">Know Me</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" data-toggle="tab" class="analistic-02">Pictures</a></li>
+                                    <li class="active"><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" data-toggle="tab" class="tehnical">Videos</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" data-toggle="tab" class="tehnical">Call Me</a></li>
+                                    <li class=""><a href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating" data-toggle="tab" class="tehnical">Rating</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab1">
+
+                                    </div>
+
+                                     <div class="tab-pane" id="tab2">
+
+                                        
+                                     </div>
+
+                                     <div class="tab-pane  active in" id="tab3">
+
+                                     	<div class="row">
+								      		<div ng-if="trainerVideoData.hasVideo">
+												<div>
+													<div class="col-md-6" ng-repeat="video in trainerVideoData.videos">
+													  <iframe src="{{video}}" width="500" height="315" allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6" ng-if="!trainerVideoData.hasVideo">
+													<div class="col-sm-6" class="alert alert-danger text-lg">
+														<h3>
+															<i class="fa fa-frown-o" aria-hidden="true" style="margin-right: 6px"></i>
+															Oops! No videos found.
+														</h3>
+													</div>
+											</div>
+										</div>
+                                        
+                                     </div>
+                                     
+                                     <div class="tab-pane" id="tab4">
+                                        
+                                     </div>
+
+                                     <div class="tab-pane" id="tab5">
+                                        
+                                     </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div><!--/.col-sm-6-->
             </div>
-    </header>
-
-    
-	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
-
-	<ul class="nav nav-tabs">
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}">Details</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics">Pictures</a></li>
-	    <li class="active"><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids">Videos</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call">Call Me</a></li>
-	    <li><a data-toggle="tab" href="#/videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/rating">Rating</a></li>
-  	</ul>
-
-  <div class="tab-content">
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}" class="tab-pane fade">
-      
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/pics" class="tab-pane fade">
-
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/vids" class="tab-pane fade in active">
-      	<div class="row">
-      		<div ng-if="trainerVideoData.hasVideo">
-				<div>
-					<div class="col-md-6" ng-repeat="video in trainerVideoData.videos">
-					  <iframe src="{{video}}" width="500" height="315" allowfullscreen></iframe>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-6" ng-if="!trainerVideoData.hasVideo">
-					<div class="col-sm-6" class="alert alert-danger text-lg">
-						<h3>
-							<i class="fa fa-frown-o" aria-hidden="true" style="margin-right: 6px"></i>
-							Oops! No videos found.
-						</h3>
-					</div>
-			</div>
-		</div>
-    </div>
-    <div id="videos/{{trainerVideoData.serviceType}}/{{trainerVideoData._id}}/call" class="tab-pane fade">
-
-    </div>
-  </div>
-</div>
+        </div>
+    </section>
 
 </div>

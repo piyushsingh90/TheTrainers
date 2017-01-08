@@ -1,0 +1,116 @@
+<div ng-controller="WorkShopController" style="min-height: 600px;">
+
+    <header id="head" class="secondary">
+            <div class="container">
+                    <h1>Workshops</h1>
+                    <p>Checkout the upcoming Workshops conducted by Us !!!</p>
+            </div>
+    </header>
+
+    
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+	<div ng-repeat="workshop in workshops">
+
+
+    <div class="row top-margin">
+        <div class="col-md-10 col-md-offset-1 bs-callout bs-callout-primary">
+        	<div class="row">
+	        	<div class="col-md-10">
+	            	<h4>{{workshop.heading}}</h4>
+	        	</div>
+	        	<div class="col-md-2">
+  					<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#{{workshop._id}}">Details
+  					</button>
+	        	</div>
+        	</div>
+
+            <span class="label">Date: {{workshop.date | date: mediumDate}}</span>
+            <span class="label">Time: {{workshop.time}}</span>
+            <span class="label">Venue: {{workshop.venue}}</span>
+            <p>{{workshop.description}}</p>
+
+        </div>
+    </div>
+ 
+
+	 <div class="modal fade" id="578e57d7bebd0d0a1cc3765b" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e57d7bebd0d0a1cc3765b.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e5d3bbebd0d0a1cc3765d" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e5d3bbebd0d0a1cc3765d.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e630dbebd0d144033ef30" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e630dbebd0d144033ef30.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e639dbebd0d144033ef32" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e639dbebd0d144033ef32.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="578e64a3bebd0d0140d0c866" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	           <img class="img-responsive" src="assets/images/workshop/578e64a3bebd0d0140d0c866.jpg" alt="">
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</div>
+
+
+
+	<div class="col-md-12" ng-if="!hasWorkshops">
+					<div class="col-sm-12" class="alert alert-danger text-lg">
+						<h3 align="center">
+							<i class="fa fa-frown-o" aria-hidden="true" style="margin-right: 6px"></i>
+							Oops! We don't have any upcoming workshops, but we will arrange one for you soon.
+							<i class="fa fa-smile-o" aria-hidden="true" style="margin-left: 6px"></i>
+						</h3>
+					</div>
+	</div>
+	
+   
+</div>

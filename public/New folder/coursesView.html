@@ -1,0 +1,38 @@
+<div ng-controller="TrainerController" 	style="min-height: 600px;">
+
+	<header id="head" class="secondary">
+            <div class="container">
+                    <h1>{{headerText}}</h1>
+            </div>
+    </header> 
+
+
+	<img src="assets/images/ajax-loader.gif" class="center-block" ng-hide="!layout.loading"  />
+
+
+	<div class="row top-margin">
+		<div class="col-md-12">
+
+				<div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+					<article class="col-sm-3 isotopeItem" ng-repeat="trainer in trainerData track by trainer._id" index="trainer._id">
+						<div class="portfolio-item" >
+							<img src="assets/images/profile/{{trainer.image}}" class="img-rounded" height="300px" width="150px" />
+								 
+								<div class="portfolio-desc align-center">
+									<div class="folio-info">
+										<a href="#/videos/{{trainer.serviceType}}/{{trainer._id}}" class="fancybox">
+											<h5>Details</h5>
+											<i class="fa fa-link fa-2x"></i></a>
+									</div>
+								</div>
+								<span class="label label-primary pic-subheader">{{trainer.Name}}</span>
+								<span class="label label-info pic-subheader">{{trainer.serviceType}}</span>
+								<span class="label label-default pic-subheader">{{trainer.area}}</span>
+								
+						</div>
+					</article>				
+				</div>
+		</div>
+	</div>
+</div>

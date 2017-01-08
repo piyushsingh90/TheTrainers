@@ -1,0 +1,106 @@
+<div ng-controller="RouteController">
+
+        <header id="head">
+            <div style="height: 300 px">
+              <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                  <img ng-src="{{slide.image}}" style="margin:auto;">
+                  <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                  </div>
+                </uib-slide>
+              </uib-carousel>
+            </div>
+        </header>
+
+
+      <div class="row top-margin">
+          <div class="col-md-3">
+            <div class="grey-box-icon">
+              <div class="icon-box-top grey-box-icon-pos fa fa-youtube-play fa-5x">
+              </div><!--icon box top -->
+              <h4>Online Videos</h4>
+              <p>You can catch a glimpse of your trainers in action ! Check out the demo training videos available on our portal.</p>
+            </div><!--grey box -->
+          </div><!--/span3-->
+
+          <div class="col-md-3">
+            <div class="grey-box-icon">
+              <div class="icon-box-top grey-box-icon-pos fa fa-user-secret fa-5x">
+              </div><!--icon box top -->
+              <h4>Pro Trainers</h4>
+              <p>We have professional trainers, and you can avail services of a personal trainer too. So there is no reason stopping you now !!</p>
+            </div><!--grey box -->
+          </div><!--/span3-->
+
+          <div class="col-md-3">
+            <div class="grey-box-icon">
+              <div class="icon-box-top grey-box-icon-pos fa fa-map-marker fa-5x">
+              </div><!--icon box top -->
+              <h4>Expanding Footprints</h4>
+              <p>We provide services accross Kolkata and nearby suburbs.We conduct workshops too, So wherever you are, keep learning.</p>
+            </div><!--grey box -->
+          </div><!--/span3-->
+
+          <div class="col-md-3">
+            <div class="grey-box-icon">
+              <div class="icon-box-top grey-box-icon-pos fa fa-inr fa-5x">
+              </div><!--icon box top -->
+              <h4>Reasonable rates</h4>
+              <p>We have flexible & affordable - Daily & Monthly packages. And there's more to it, you can even customize your package.</p>
+            </div><!--grey box -->
+          </div><!--/span3-->
+      </div>
+
+
+      <div class="row top-margin">
+          <h2><span>Latest Trainings</span></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <iframe width="350" height="200" src="https://www.youtube.com/embed/z8lcbt7d4Nw"></iframe>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><h5>Dancing</h5></p>
+                                            <p>Learn to set the dance floor on the fire, so put on your dancing shoes fast.</p>
+                                        </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <iframe width="350" height="200" src="http://www.youtube.com/embed/x55-V5LqobE"></iframe>
+                            <div class="caption maxheight2">
+                            <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><h5>Exercise</h5></p>
+                                            <p>Everybody wants better abs! This class has it all what it takes for a 6 pack, so be ready to work!.</p>
+                                        </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <iframe width="350" height="200" src="http://www.youtube.com/embed/G_hqcKdDvro"></iframe>
+                            <div class="caption maxheight2">
+                           <div class="box_inner">
+                                        <div class="box">
+                                            <p class="title"><h5>Yoga</h5></p>
+                                            <p>When you find peace within yourself, you become the kind of person who can live at peace with others.</p>
+                                        </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
