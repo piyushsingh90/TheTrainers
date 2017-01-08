@@ -298,7 +298,7 @@ div.hbox {
 	background-color: #E0E0E0;
 }
 .page-header {
-	border-bottom: 1px solid #15c008;
+	border-bottom: 0px solid #15c008;
 }
 .page-title {
 	margin-top: 20px;
